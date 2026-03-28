@@ -1,0 +1,3014 @@
+{
+  "__construct,/home/ubuntu/Desktop/projects/magento2/pub/errors/processor.php#179": {
+    "decorators_to_add": [
+      "💥"
+    ],
+    "decorators_to_remove": []
+  },
+  "sendReport,/home/ubuntu/Desktop/projects/magento2/pub/errors/processor.php#666": {
+    "decorators_to_add": [
+      "💥"
+    ],
+    "decorators_to_remove": []
+  },
+  "handle,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Webapi/Model/Soap/Server.php#116": {
+    "decorators_to_add": [
+      "💥"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Controller/Adminhtml/Category/Save.php#131": {
+    "decorators_to_add": [
+      "💥"
+    ],
+    "decorators_to_remove": []
+  },
+  "getOrderOptions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Type/AbstractType.php#680": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_prepareIndex,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product/Indexer/Eav/Decimal.php#37": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "move,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Indexer/Product/Flat/Action/Rows/TableData.php#50": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getCategoriesTree,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Ui/DataProvider/Product/Form/Modifier/Categories.php#351": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getDataFromRequest,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogGraphQl/Plugin/ProductAttributeSortInput.php#78": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getFormattedOptionValue,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Option/Type/File.php#345": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getFilesystem,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Module/Setup/Context.php#186": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getCustomerIdsForReindex,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Customer/Model/ResourceModel/Customer/Grid.php#71": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_applyCustomOption,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product/Indexer/Price/DefaultPrice.php#569": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_prepareForm,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Email/Block/Adminhtml/Template/Edit/Form.php#92": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "insertOnDuplicate,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#2170": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "saveParentItemConfigurableData,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Fixtures/Quote/QuoteGenerator.php#273": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserialize,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Wishlist/Model/DataSerializer.php#105": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "__construct,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/Element/Template.php#135": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "convert,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/Layout/PageType/Config/Converter.php#13": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getVirtualClasses,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/Utility/Classes.php#213": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "sendFileContent,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/Response/File.php#213": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "process,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/AsynchronousOperations/Model/OperationProcessor.php#112": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_updateIndex,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogInventory/Model/ResourceModel/Indexer/Stock/DefaultStock.php#321": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Developer/Console/Command/XmlConverterCommand.php#106": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "moveNode,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Tree.php#486": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "catchException,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/StaticResource.php#194": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserialize,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Serialize/SerializerInterface.php#34": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getStopwordsList,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Elasticsearch/SearchAdapter/Query/Preprocessor/Stopwords.php#143": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_loadCache,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Translate.php#569": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "callTagValidators,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Validator/HTML/ConfigurableWYSIWYGValidator.php#220": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Console/Command/DiCompileCommand.php#155": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/MediaGallery/Model/Asset/Command/GetByPath.php#70": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserialize,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Backend/Model/Menu.php#299": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "truncateTable,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#2854": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getAllOptions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Attribute/Source/Countryofmanufacture.php#77": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "fileWrite,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Filesystem/Driver/File.php#821": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "duplicate,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product/Option/Value.php#390": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getFeeds,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Rss/Model/Rss.php#70": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_initMenu,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Backend/Model/Menu/Config.php#137": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getValidationRules,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Model/Entity/Attribute/AbstractAttribute.php#1350": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getTables,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#4292": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "escapeAttributeValues,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Escaper.php#244": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_makeConditionFromDateRangeSelect,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Reports/Model/ResourceModel/Report/AbstractReport.php#286": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_writeFile,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Archive/AbstractArchive.php#24": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getSelectionAttributes,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Block/Adminhtml/Sales/Order/Items/Renderer.php#191": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "switch,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Store/Model/StoreSwitcher/HashProcessor.php#97": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_loadPrimaryConfig,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/ObjectManagerFactory.php#308": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "validateConfigured,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Validator/HTML/ConfigurableWYSIWYGValidator.php#114": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "query,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/OpenSearch/SearchAdapter/Adapter.php#101": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "cleanupDb,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Model/Installer.php#1560": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "decode,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CardinalCommerce/Model/JwtManagement.php#46": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "exec,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/Backpressure/SlidingWindow/RedisRequestLogger/RedisClient.php#139": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "saveItemSimpleData,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Fixtures/Quote/QuoteGenerator.php#241": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "load,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/ObjectManager/ConfigLoader.php#70": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "__construct,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/Element/UiComponent/Config/Provider/Template.php#72": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "afterGetItemDisplayPriceExclTax,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Plugin/Tax/BlockItemPriceRenderer.php#47": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "initFilesystem,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Option/Type/File/ValidatorFile.php#249": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "moveNodes,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Tree.php#822": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_afterSave,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/User/Model/ResourceModel/User.php#211": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "process,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/AsyncConfig/Model/Consumer.php#75": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "streamWrite,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Filesystem/Io/File.php#170": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getFilesystem,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Setup/ModuleDataSetupInterface.php#79": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "resizeFromThemes,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/MediaStorage/Service/ImageResize.php#194": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "subtractProductFromQuotes,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Quote/Model/ResourceModel/Quote.php#219": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "duplicate,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product.php#561": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "validate,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Analytics/ReportXml/DB/ReportValidator.php#49": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "output,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Downloadable/Helper/Download.php#282": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getCreateTableSql,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Setup/Declaration/Schema/Db/MySQL/DbSchemaReader.php#185": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_prepareMultiselectIndex,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product/Indexer/Eav/Source.php#321": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "load,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Module/PackageInfo.php#91": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getCustomOptions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Helper/Product/Configuration.php#83": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "checkIsFile,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Theme/Model/Favicon/Favicon.php#104": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/Product/BundleOptionDataProvider.php#73": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "doQuery,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Setup/Declaration/Schema/Db/MySQL/DbSchemaWriter.php#368": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "parse,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Ui/Config/Argument/Parser/XpathType.php#19": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "moveQuoteItem,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/AdminOrder/Create.php#884": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getDataFromRequest,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/GraphQl/Controller/GraphQl.php#288": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getWidgetParameters,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Widget/Model/Widget/Instance.php#440": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "insertFromSelect,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Indexer/Model/ResourceModel/AbstractResource.php#132": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "convertSwatchToDropdown,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Swatches/Model/Plugin/EavAttribute.php#170": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_toHtml,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/Element/Html/Date.php#19": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getAssetsData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/MediaGallery/Model/ResourceModel/GetAssetsByPaths.php#102": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "checkDatabasePrivileges,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Validator/DbValidator.php#164": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getThemeByRequest,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/DesignExceptions.php#68": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "prepareOptionValueForRequest,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Option/Type/File.php#480": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "buildSelect,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogRule/Model/Indexer/RuleProductsSelectBuilder.php#90": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "cleanWishlistItemOptionTable,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Wishlist/Setup/Patch/Data/WishlistDataCleanUp.php#89": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Wishlist/Controller/Index/DownloadCustomOption.php#58": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Fixtures/OrdersFixture.php#198": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadScopeData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Config/App/Config/Type/System.php#303": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "aroundExecute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Captcha/Model/Customer/Plugin/AjaxLogin.php#75": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "isFileValid,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Downloadable/Model/Sample/ContentValidator.php#113": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getSelectionAttributes,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/Sales/Order/Pdf/Items/AbstractItems.php#203": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_movePriceDataToIndexTable,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product/Indexer/Price/DefaultPrice.php#758": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "deleteAssetsByDirectoryPath,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/MediaGallery/Model/ResourceModel/DeleteAssetsByPaths.php#84": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_getStatement,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Model/ResourceModel/Iterator.php#53": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getIntegrations,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Integration/Model/Config.php#64": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "persist,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Setup/JsonPersistor.php#20": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserialize,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Store/Model/StoreSwitcher/RedirectDataSerializerInterface.php#31": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getRulesArrayForRole,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Authorization/Model/Acl/Loader/Rule.php#224": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "prepareItems,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/Order/ShipmentFactory.php#95": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "appendChild,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Tree.php#309": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getAdditionalData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Quote/Model/Quote/Payment.php#341": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "convert,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Widget/Model/Config/Converter.php#17": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadChange,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Theme/Model/Design.php#108": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getStoresData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Store/Model/StoresData.php#57": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getInfoBuyRequest,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/Reorder/OrderInfoBuyRequestGetter.php#47": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getCallback,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Setup/Declaration/Schema/Db/MySQL/DDL/Triggers/MigrateDataFromAnotherTable.php#52": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "renderErrorMessage,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Webapi/RequestAwareErrorProcessor.php#62": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "trace,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Debug.php#67": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getMethodParams,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Reflection/MethodsMap.php#130": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "aggregate,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Reports/Model/ResourceModel/Report/Product/Viewed.php#102": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "collect,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Weee/Model/Total/Creditmemo/Weee.php#59": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "mapActionConditions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/SalesRule/Model/Converter/ToDataModel.php#127": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "dropTrigger,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#4257": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "displayItem,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/ObjectManager/Profiler/Log.php#156": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "formattedOptions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/AdminOrder/Create.php#2332": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getAclResources,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Acl/AclResource/Provider.php#70": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "modifyPrice,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogRule/Model/Indexer/ProductPriceIndexModifier.php#54": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "applyFixedBundleSelectionPrice,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/ResourceModel/Indexer/Price.php#574": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getBundleSelectionIds,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/Product/Price.php#175": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getKeywordsData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/MediaGallery/Model/ResourceModel/Keyword/GetAssetsKeywords.php#85": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "collectEntities,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Module/Di/Code/Scanner/PluginScanner.php#16": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_loadScopedData,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Interception/PluginList/PluginList.php#204": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getConfigFiles,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Theme/Model/PageLayout/Config/Builder.php#92": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "checkProductBuyState,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/Product/Type.php#1067": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "scanFactories,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Module/Di/Code/Scanner/XmlScanner.php#87": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "createFilesystem,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Mvc/Bootstrap/InitParamListener.php#187": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_aggregateByOrderCreatedAt,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/ResourceModel/Report/Refunded.php#47": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "disableTableKeys,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#3736": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_getRoutes,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/Route/Config.php#87": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "write,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Module/Di/Compiler/Config/Writer/Filesystem.php#42": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "validateAttributeValue,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Validator/HTML/ConfigurableWYSIWYGValidator.php#282": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getOrderOptions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/Product/Type.php#915": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "resizeFromImageName,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/MediaStorage/Service/ImageResize.php#157": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "isFileValid,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Downloadable/Model/Link/ContentValidator.php#151": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "collectEntities,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Module/Di/Code/Scanner/RepositoryScanner.php#26": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "calculateDynamicBundleSelectionPrice,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/ResourceModel/Indexer/Price.php#698": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getRoutesConfig,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Webapi/Model/ServiceMetadata.php#290": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "aroundGetAttributesUsedForSortBy,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Plugin/Model/ResourceModel/Config.php#92": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "query,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Elasticsearch8/SearchAdapter/Adapter.php#90": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "checkProductBuyState,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Downloadable/Model/Product/Type.php#251": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getBundleSelectionIds,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/Product/OriginalPrice.php#111": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_aggregateByOrderCreatedAt,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/ResourceModel/Report/Shipping.php#46": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "convertCreditCards,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Payment/Model/Config/Converter.php#29": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "__construct,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Module/DataSetup.php#60": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "afterSetForm,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Msrp/Plugin/Bundle/Block/Adminhtml/Catalog/Product/Edit/Tab/Attributes.php#17": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/MediaContentSynchronization/Model/Consume.php#70": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_afterLoad,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/User/Model/ResourceModel/User.php#275": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "convert,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Backend/Model/Menu/Config/Converter.php#21": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "aroundExecute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/WebapiAsync/Plugin/AsynchronousOperations/MassConsumerEnvelopeCallback.php#84": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "process,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Logger/QueryIndexAnalyzer.php#50": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "initializeMap,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Theme/Model/Theme/ThemePackageInfo.php#94": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "write,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Filesystem/Io/File.php#470": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getJsLayout,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/LoginAsCustomerAssistance/Block/Adminhtml/NotAllowedPopup.php#49": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getBreadcrumbsJavascript,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Block/Adminhtml/Category/Tree.php#348": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_parseVariablesString,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Email/Model/Template.php#305": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "saveQuoteWithQuoteItems,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Fixtures/Quote/QuoteGenerator.php#179": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "dropTable,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#2816": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getApplied,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Weee/Helper/Data.php#382": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_aggregateByInvoiceCreatedAt,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/ResourceModel/Report/Invoiced.php#48": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getMetadata,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/UrlRewrite/Model/UrlRewrite.php#120": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getInlineJs,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Data/Form/Element/Editor.php#535": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "removeNotAllowedAttributes,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Escaper.php#187": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_initCollectors,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/Config/Ordered.php#187": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "beforeDispatch,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Wishlist/Controller/Index/Plugin.php#108": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getMetadata,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/UrlRewrite/Service/V1/Data/UrlRewrite.php#237": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Quote/Model/QuoteIdMutex.php#34": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_unserializeStoreConfig,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CurrencySymbol/Model/System/Currencysymbol.php#273": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "prepareData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Ui/Model/Manager.php#166": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "generateCatalog,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Developer/Model/XmlCatalog/Format/PhpStorm.php#62": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getWeight,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/Product/Type.php#355": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "modify,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/ResourceModel/Indexer/SelectionPriceModifier.php#31": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "ensureFileInFilesystem,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Downloadable/Helper/File.php#119": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "convert,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Acl/AclResource/Config/Converter/Dom.php#20": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadData,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/Design/Theme/ThemeList.php#145": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getFlagData,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Flag.php#111": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getAfterElementHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Block/Adminhtml/Helper/Form/Wysiwyg.php#86": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Controller/Download/DownloadCustomOption.php#71": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getLogoUrl,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Email/Model/AbstractTemplate.php#395": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "modifyPrice,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogInventory/Model/Indexer/ProductPriceIndexFilter.php#87": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "addNewItem,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Wishlist/Model/Wishlist.php#439": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "checkProductBuyState,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/ConfigurableProduct/Model/Product/Type/Configurable.php#1129": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "startSetupForAllConnections,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Setup/Declaration/Schema/OperationsExecutor.php#132": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "checkDatabaseName,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Validator/DbValidator.php#142": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "display,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/ObjectManager/Profiler/Log.php#130": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_aggregateByOrderCreatedAt,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/ResourceModel/Report/Invoiced.php#171": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getIteratorForCustomQuery,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/ImportExport/Model/ResourceModel/Import/Data.php#87": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "initData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Ui/Config/Data.php#94": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "isLinkFileValid,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Downloadable/Ui/DataProvider/Product/Form/Modifier/Data/Links.php#211": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Shell.php#48": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "get,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogImportExport/Model/Import/Product/SkuStorage.php#70": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadAllData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Config/App/Config/Type/System.php#239": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getServices,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/WebapiAsync/Model/Config.php#62": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_aggregateByField,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/ResourceModel/Report/Order/Createdat.php#46": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_aggregateByShippingCreatedAt,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/ResourceModel/Report/Shipping.php#139": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserialize,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Serialize/Serializer/Serialize.php#32": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "createTemporaryTable,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#2398": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "isJsonEncoded,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Model/Entity/Attribute/Backend/JsonEncoded.php#71": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadThemeFromCache,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Theme/Model/Theme/ThemeProvider.php#157": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "convert,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Theme/Model/Layout/Config/Converter.php#13": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_prepareQuoteItems,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/AdminOrder/Create.php#2046": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "filePutContents,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Filesystem/Driver/File.php#630": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "__call,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Session/SessionManager.php#145": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getBuyRequest,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Wishlist/Model/Item.php#473": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Backend/Block/Widget/Grid/Column/Filter/Date.php#68": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "modifyData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogInventory/Ui/DataProvider/Product/Form/Modifier/AdvancedInventory.php#90": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "updateCustomerFromVisitor,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Reports/Model/ResourceModel/Product/Index/AbstractIndex.php#45": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getPackageName,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Theme/Model/Theme/ThemePackageInfo.php#60": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "isModified,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Model/ResourceModel/Db/VersionControl/Snapshot.php#89": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "readHeaders,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/JwtFrameworkAdapter/Model/JwsManager.php#196": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Persistent/Observer/SetRememberMeStatusForAjaxLoginObserver.php#61": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "convertMethods,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Payment/Model/Config/Converter.php#108": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "collectEntities,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Module/Di/Code/Scanner/ServiceDataAttributesScanner.php#19": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "validate,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Option/Type/File/ValidatorFile.php#130": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_removeNotVisibleEntityFromIndex,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product/Indexer/Eav/AbstractEav.php#128": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "nestedMerge,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/Element/UiComponent/Config/DomMerger.php#185": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_unserializeField,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Model/ResourceModel/AbstractResource.php#150": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "fetch,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Tax/Model/Sales/Total/Quote/Tax.php#323": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_getMatchedNode,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Config/Dom.php#332": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "processStoreAggregate,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/ResourceModel/Report/Bestsellers.php#207": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getRegionSelect,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Directory/Block/Data.php#195": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "sendResponse,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/Console/Response.php#55": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserialize,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Unserialize/Unserialize.php#38": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "filePutContents,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Filesystem/Driver/Http.php#108": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Controller/Adminhtml/Product/Attribute/Validate.php#114": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_aggregateByRefundCreatedAt,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/ResourceModel/Report/Refunded.php#135": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getElementHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Block/Adminhtml/Category/Helper/Pricestep.php#68": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "__construct,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/Router/ActionList.php#79": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "process,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/SalesRule/Model/Queue/Consumer/RuleQuoteRecollectTotals.php#70": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getSelectedAttributesInfo,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/ConfigurableProduct/Model/Product/Type/Configurable.php#977": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getEntityAttributes,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Model/Config.php#787": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "aggregate,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/ResourceModel/Report/Bestsellers.php#118": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_getDeleteCheckbox,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Block/Adminhtml/Product/Helper/Form/Image.php#70": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "generateCatalog,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Developer/Model/XmlCatalog/Format/VsCode.php#64": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Shell/Driver.php#37": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getSetInfo,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Model/ResourceModel/Entity/Attribute/Set.php#206": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserializeContent,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/ReleaseNotification/Ui/DataProvider/Modifier/Notifications.php#222": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "sendRequest,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Fedex/Model/Carrier.php#1067": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "setChildItemsQtyToInvoice,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/Service/InvoiceService.php#225": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "create,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Analytics/ReportXml/QueryFactory.php#129": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "isSampleFileValid,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Downloadable/Ui/DataProvider/Product/Form/Modifier/Data/Samples.php#163": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_construct,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Review/Block/Adminhtml/Add.php#20": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_prepareRelationIndex,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product/Indexer/Eav/AbstractEav.php#229": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadHashesFromFile,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Csp/Model/SubresourceIntegrity/Storage/File.php#208": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "load,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/Model/Layout/Merge.php#469": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserialize,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Serialize/Serializer/FormData.php#36": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "read,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/HTTP/Adapter/Curl.php#210": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getElementHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Block/Adminhtml/Category/Helper/Sortby/Available.php#64": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "aroundGetStoreLabelsByAttributeId,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Plugin/Model/ResourceModel/Entity/Attribute.php#60": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "createFromSelect,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/TemporaryTableService.php#83": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getServices,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/WebapiAsync/Model/BulkServiceConfig.php#64": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "convertGroups,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Payment/Model/Config/Converter.php#80": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getElementHtml,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Data/Form/Element/Editablemultiselect.php#80": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "duplicate,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product/Option.php#358": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_construct,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Widget/Block/Adminhtml/Widget.php#20": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getAfterElementHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Block/Adminhtml/Product/Helper/Form/Category.php#125": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "process,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogUrlRewrite/Model/UpdateProductUrlRewrite.php#52": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "afterLoad,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Model/Entity/Attribute/Backend/JsonEncoded.php#57": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "prepareOptionValueForRequest,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Option/Type/Date.php#302": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "load,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/ObjectManager/ConfigLoader/Compiled.php#26": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "initFilePath,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Option/Type/File/ValidatorInfo.php#179": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Wishlist/Model/WishlistCleaner.php#52": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "escapeText,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Escaper.php#229": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_aggregateByOrder,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Tax/Model/ResourceModel/Report/Tax/Createdat.php#48": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getIterator,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/ImportExport/Model/ResourceModel/Import/Data.php#62": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Ui/Controller/Adminhtml/Bookmark/Save.php#110": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "collectEntities,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Module/Di/Code/Scanner/InterceptedInstancesScanner.php#17": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadPreconfiguredWidget,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Widget/Model/ResourceModel/Widget.php#32": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getActions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Rule/Model/AbstractModel.php#242": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Backend/Block/Widget/Grid/Column/Filter/Datetime.php#85": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "createTemporaryFileAndPutContent,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/File/Pdf/ImageResource/ImageFactory.php#67": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getElementHtml,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Data/Form/Element/Editor.php#138": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "readConstraints,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Setup/Declaration/Schema/Db/MySQL/DbSchemaReader.php#200": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_fileExists,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Image.php#866": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getLinkData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Downloadable/Block/Adminhtml/Catalog/Product/Edit/Tab/Downloadable/Links.php#238": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "multiRequest,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/HTTP/Adapter/Curl.php#293": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_toHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Widget/Block/Adminhtml/Widget/Chooser.php#146": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getBuyRequest,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Quote/Model/Quote/Item.php#846": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "makeRequest,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/HTTP/Client/Socket.php#461": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "printLogQuery,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Data/Collection/AbstractDb.php#985": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "clear,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Tree.php#262": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "afterGetOptionsMediaGalleryDataJson,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/ConfigurableProduct/Block/Plugin/Product/Media/Gallery.php#36": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "incrAndGetFor,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/Backpressure/SlidingWindow/RedisRequestLogger.php#61": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_prepareIndexTable,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogInventory/Model/ResourceModel/Indexer/Stock/DefaultStock.php#304": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "read,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Filesystem/Io/File.php#442": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getBundleOptions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Helper/Catalog/Product/Configuration.php#137": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "asNiceXml,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Simplexml/Element.php#238": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "renderErrorMessage,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Webapi/ErrorProcessor.php#324": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/BundleGraphQl/Model/Cart/BundleOptionDataProvider.php#56": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getAppliedTaxes,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Quote/Model/Quote/Address.php#1255": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getAdditionalData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Swatches/Block/Adminhtml/Product/Attribute/Edit/Form.php#74": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "renameTablesBatch,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#2446": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "parse,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Ui/Config/Argument/Parser/ConverterType.php#33": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogInventory/Model/Indexer/Stock/Action/Full.php#142": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_prepareBundleOptionStockData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/ResourceModel/Indexer/Stock.php#91": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Quote/Model/QuoteMutex.php#34": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "afterProcess,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Tax/Model/Quote/GrandTotalDetailsPlugin.php#92": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "parseOptionValue,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Option/Type/File.php#461": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "query,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/NewRelicReporting/Model/NerdGraph/Client.php#68": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_aggregateByOrder,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/SalesRule/Model/ResourceModel/Report/Rule/Createdat.php#85": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getIntegrations,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Integration/Model/IntegrationConfig.php#66": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getElementHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/OfflineShipping/Block/Adminhtml/Form/Field/Import.php#29": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "convert,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Module/Declaration/Converter/Dom.php#16": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "callAttributeValidators,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Validator/HTML/ConfigurableWYSIWYGValidator.php#199": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "initSystemAttributes,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Model/Config.php#615": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/LoginAsCustomer/Model/GetAuthenticationDataBySecret.php#77": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "aroundSave,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Customer/Plugin/ValidateDobOnSave.php#68": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getSelectionAttributes,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Block/Sales/Order/Items/Renderer.php#130": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "optimizeTables,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Console/Command/GenerateFixturesCommand.php#183": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "updateTranslationFileContent,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Translation/Model/FileManager.php#122": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "dropTemporaryTable,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#2837": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getCollection,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sitemap/Model/ResourceModel/Catalog/Category.php#94": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "convert,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/Config/Initial/Converter.php#41": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogRule/Model/Indexer/ReindexRuleGroupWebsite.php#68": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_prepareForm,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Block/Adminhtml/Catalog/Product/Edit/Tab/Attributes.php#53": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadConfig,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Fixtures/FixtureConfig.php#42": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "removeComments,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Escaper.php#214": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "saveFileToFilesystem,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/MediaStorage/Helper/File/Storage/Database.php#228": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "__construct,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/Element/UiComponent/Config/Provider/Component/Definition.php#54": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_isFile,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Theme/Block/Html/Header/Logo.php#154": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_filterRow,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Data/Collection/Filesystem.php#467": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "send,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/File/Transfer/Adapter/Http.php#59": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/MediaGallery/Model/Asset/Command/GetById.php#68": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "process,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/SalesRule/Model/CouponUsageConsumer.php#76": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "scanProxies,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Module/Di/Code/Scanner/XmlScanner.php#66": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_loadFromFilesystem,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/Design/Theme/ThemeList.php#197": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "populateAdditionalDataEavAttribute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Swatches/Model/SwatchAttributeType.php#85": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_getHandle,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Downloadable/Helper/Download.php#146": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "processOptions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/ConfigurableProduct/Model/Quote/Item/CartItemProcessor.php#85": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getConfig,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Ui/Model/Bookmark.php#137": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_toHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/SalesRule/Block/Widget/Form/Element/Dependence.php#33": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getJsLayout,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/LoginAsCustomerAdminUi/Block/Adminhtml/ConfirmationPopup.php#72": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getConditions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Rule/Model/AbstractModel.php#204": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "cleanSalesOrderItemTable,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Setup/Patch/Data/WishlistDataCleanUp.php#91": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_getElementHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Paypal/Block/Adminhtml/System/Config/Field/Country.php#108": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_prepareSelectIndex,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product/Indexer/Eav/Source.php#164": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "onBootstrap,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Mvc/Bootstrap/InitParamListener.php#70": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/OrderMutex.php#34": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "decode,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Json/Decoder.php#35": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getReport,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Analytics/ReportXml/ReportProvider.php#96": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "process,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Attribute/Backend/Consumer.php#99": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getConfigurations,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/ConfigurableProduct/Plugin/Product/Initialization/CleanConfigurationTmpImages.php#119": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getRequestFormId,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Captcha/Controller/Refresh/Index.php#97": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "fileOpen,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Filesystem/Driver/Http.php#131": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_construct,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Review/Block/Adminhtml/Edit.php#77": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "jsonDecode,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Module/Setup/Migration.php#723": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "rawQuery,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#613": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "get,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/NewRelicReporting/Model/ServiceShellUser.php#21": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "cleanAdminUserSessionTable,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Security/Setup/Patch/Data/SessionIDColumnCleanUp.php#66": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "applyBundleOptionPrice,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/ResourceModel/Indexer/Price.php#887": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserializeValue,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogInventory/Helper/Minsaleqty.php#117": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getRolesArray,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Authorization/Model/Acl/Loader/Role.php#114": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "apply,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/GroupedProduct/Setup/Patch/Data/UpdateProductRelations.php#47": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "attachCreditCardInfo,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Vault/Model/Method/Vault.php#547": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "save,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Crontab/CrontabManager.php#204": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "mapConditions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/SalesRule/Model/Converter/ToDataModel.php#107": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getOptions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/CustomOptions/CustomOptionProcessor.php#150": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_getExtraJs,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Config/Block/System/Config/Form/Fieldset.php#255": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "calculateProductOptions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/Order/CreditmemoFactory.php#218": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "initAttributesFromCache,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Model/Config.php#989": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_prepareRelationIndex,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product/Indexer/Eav/Source.php#518": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "fileOpen,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/AwsS3/Driver/AwsS3.php#896": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "__construct,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/Config/Initial.php#47": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getMaxEntityId,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Fixtures/Quote/QuoteGenerator.php#607": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getThemes,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Theme/Model/Theme/StoreUserAgentThemeResolver.php#46": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "isVirtual,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/Product/Type.php#386": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_getExtraJs,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Paypal/Block/Adminhtml/System/Config/Fieldset/Payment.php#173": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getImagesJson,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Block/Adminhtml/Product/Helper/Form/Gallery/Content.php#175": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getElementHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Block/Adminhtml/Category/Helper/Sortby/DefaultSortby.php#64": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getAfterElementHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Block/Adminhtml/Product/Edit/NewCategory.php#152": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_getJs,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogInventory/Block/Adminhtml/Form/Field/Stock.php#183": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "hasAssigned2Role,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/User/Model/User.php#701": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "decode,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Widget/Helper/Conditions.php#56": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "enableTableKeys,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#3752": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "createTemporaryTableLike,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#2424": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_loadScopedData,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Config/Data/Scoped.php#83": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "collect,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Weee/Model/Total/Invoice/Weee.php#57": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "showTableStatus,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#1353": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadImageInfoFromCache,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Image.php#969": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "process,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Attribute/Backend/ConsumerWebsiteAssign.php#84": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getEditableOptionValue,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Option/Type/File.php#436": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "prepareTierPriceIndex,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/ResourceModel/Indexer/Price.php#774": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getServices,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/WebapiAsync/Model/ServiceConfig.php#69": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "insertArray,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#2288": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "makeRequest,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/HTTP/Client/Curl.php#356": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getServicesConfig,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Webapi/Model/ServiceMetadata.php#170": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "calculateTaxForItems,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Tax/Helper/Data.php#723": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getOptions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Pricing/Price/ConfiguredPrice.php#105": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserialize,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Serialize/Serializer/Base64Json.php#31": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "executeRenderer,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/Layout.php#1137": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadReport,/home/ubuntu/Desktop/projects/magento2/pub/errors/processor.php#549": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "exec,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Setup/SampleData/Executor.php#51": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserializeValue,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/DataConverter/SerializedToJson.php#80": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "apply,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Setup/Patch/Data/UpdateMultiselectAttributesBackendTypes.php#65": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "export,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/ImportExport/Model/Export/ExportManagement.php#59": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "convert,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DataObject/Copy/Config/Converter.php#16": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getCollection,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sitemap/Model/ResourceModel/Catalog/Batch/Product.php#162": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserialize,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Serialize/Serializer/Json.php#35": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_getElementHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Tax/Block/Adminhtml/Frontend/Region/Updater.php#47": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Controller/Adminhtml/Product/Attribute/Save.php#138": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "saveChildItemConfigurable,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Fixtures/Quote/QuoteGenerator.php#315": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "render,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Customer/Block/Adminhtml/Edit/Renderer/Region.php#52": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "readIndexes,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Setup/Declaration/Schema/Db/MySQL/DbSchemaReader.php#138": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getElementHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Block/Adminhtml/Product/Helper/Form/Config.php#51": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_afterLoad,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Config/Model/Config/Backend/Serialized.php#56": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "collectEntities,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Module/Di/Code/Scanner/XmlScanner.php#33": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getSelectOptions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Model/Entity/Attribute/Frontend/AbstractFrontend.php#307": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "query,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Elasticsearch/ElasticAdapter/SearchAdapter/Adapter.php#88": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "iterate,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogImportExport/Model/Import/Product/SkuStorage.php#86": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "syncData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Indexer/Product/Eav/Action/Full.php#152": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getOptionValueAsArray,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/Quote/Item/Option.php#112": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getCountryHtmlSelect,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Directory/Block/Data.php#122": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadDefaultScopeData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Config/App/Config/Type/System.php#267": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "cleanupFilesystem,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Deploy/Model/Filesystem.php#283": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "process,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/MediaStorage/Model/ConsumerImageResize.php#67": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "formatBundleOptionItems,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/BundleGraphQl/Model/Resolver/Order/Item/BundleOptions.php#127": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "initData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Quote/Model/QueryResolver.php#81": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "deserialize,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Webapi/Rest/Request/Deserializer/Json.php#56": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "aroundGetAttributesUsedInListing,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Plugin/Model/ResourceModel/Config.php#63": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "removeNode,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Tree.php#410": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_toHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Backend/Block/Widget/Form/Element/Dependence.php#133": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "ensureBatchSize,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Indexer/BatchSizeManagement.php#40": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_unserializeValue,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Option/Type/File.php#405": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getOptionValues,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Quote/Model/Quote/Item/Compare.php#48": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "renameTable,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#2911": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getMediaGalleryCollection,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Gallery/CopyHandler.php#140": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "generateElements,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/Layout.php#356": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "updateReportRatingPos,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Reports/Model/ResourceModel/Helper.php#54": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Csp/Model/SubresourceIntegrityRepository.php#153": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getProductOptions,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/Order/Item.php#481": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getAssetsData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/MediaGallery/Model/ResourceModel/GetAssetsByIds.php#94": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_getElementHtml,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Directory/Block/Adminhtml/Frontend/Region/Updater.php#35": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getSampleData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Downloadable/Block/Adminhtml/Catalog/Product/Edit/Tab/Downloadable/Samples.php#135": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "writeConfig,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Interception/PluginListGenerator.php#348": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "insertLogo,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Model/Order/Pdf/AbstractPdf.php#284": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getValidateRules,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Model/Attribute.php#88": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "walk,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Mview/View/ChangelogBatchWalker.php#71": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "compare,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/Quote/Item/Option/BundleSelectionAttributesComparator.php#36": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "saveReport,/home/ubuntu/Desktop/projects/magento2/pub/errors/processor.php#520": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "process,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Attribute/Backend/WebsiteSpecific/ValueSynchronizer.php#42": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getRange,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Reports/Model/ResourceModel/Report/AbstractReport.php#205": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "modifyPrice,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product/Indexer/Price/CustomOptionPriceModifier.php#92": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "format,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Developer/Model/Tools/Formatter.php#30": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "removeNotAllowedTags,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Escaper.php#166": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "executeJolokiaRequest,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Stomp/StompClient.php#511": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "assembleAdditionalDataEavAttribute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Swatches/Helper/Data.php#141": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getMethodsMap,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Reflection/MethodsMap.php#106": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "readHeaders,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/JwtFrameworkAdapter/Model/JweManager.php#186": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "fileWrite,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/AwsS3/Driver/AwsS3.php#845": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "unserialize,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogImportExport/Model/Import/Product/SkuStorage.php#206": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "write,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/ObjectManager/ConfigWriter/Filesystem.php#40": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getCollection,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sitemap/Model/ResourceModel/Catalog/Product.php#311": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getRulesArray,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Authorization/Model/Acl/Loader/Rule.php#199": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "create,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/SalesSequence/Model/Builder.php#229": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "accumulateThemeTemplateFiles,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/Utility/Files.php#1188": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_write,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Archive/Helper/File.php#221": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "cacheUserDefinedAttribute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Model/Config.php#682": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getIntegrations,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Integration/Model/ConsolidatedConfig.php#61": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getPartInsertSql,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Backup/Model/ResourceModel/Helper.php#260": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getFilesystem,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Module/DataSetup.php#190": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "enableDefaultMode,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Deploy/Model/Mode.php#185": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "updateAdminTextSwatchValues,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Swatches/Setup/Patch/Data/UpdateAdminTextSwatchValues.php#77": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getServices,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Webapi/Model/Config.php#71": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getFilesystem,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/View/Element/Template/Context.php#199": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "prepare,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogInventory/Ui/Component/Product/Form/Element/UseConfigSettings.php#56": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "endSetupForAllConnections,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Setup/Declaration/Schema/OperationsExecutor.php#148": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_initEntityTypes,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Model/Config.php#397": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "save,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Csp/Model/SubresourceIntegrity/Storage/File.php#108": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "process,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/ProductAlert/Model/Mailing/Consumer.php#63": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getSelectionAttributes,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Block/Adminhtml/Sales/Order/View/Items/Renderer.php#158": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "createTable,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#2357": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getEntityGuidFromApplication,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/NewRelicReporting/Model/NerdGraph/Client.php#133": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadByUsername,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/User/Model/User.php#681": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "setGroupConcatMax,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Eav/Model/Mview/ChangelogBatchWalker/IdsSelectBuilder.php#100": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "display,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Profiler/Driver/Standard/Output/Html.php#22": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getNextAutoIncrementValue,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Setup/Declaration/Schema/Db/MySQL/DbSchemaWriter.php#422": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "saveDataFromSelect,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/ResourceModel/Product/Indexer/Eav/Source.php#490": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "setDefaultCharsetAndCollation,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Model/Installer.php#1894": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getSku,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Bundle/Model/Product/Type.php#322": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "regenerateStatic,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Deploy/Model/Filesystem.php#156": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "initData,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Config/Data.php#104": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "cleanQuoteItemOptionTable,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Quote/Setup/Patch/Data/WishlistDataCleanUp.php#89": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "copyQuoteToOrder,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Catalog/Model/Product/Option/Type/File.php#494": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "fromBody,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Analytics/Model/Connector/Http/JsonConverter.php#45": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getChildren,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Tree.php#1056": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "initData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Ui/Config/Reader/Definition/Data.php#83": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getProductOptionsArray,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Plugin/Model/ResourceModel/Order/Relation/AddExistingItemProductOptions.php#34": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getProductsData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/CatalogImportExport/Model/ResourceModel/ProductDataLoader.php#35": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "readUsedProductsCacheData,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/ConfigurableProduct/Model/Product/Type/Configurable.php#1496": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getFilesystem,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/App/StaticResource.php#257": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getMaxEntityId,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Fixtures/OrdersFixture.php#560": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "loadDdlCache,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php#1727": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getFullInfo,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Quote/Model/Quote/Address/Total.php#199": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "enableDeveloperMode,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Deploy/Model/Mode.php#166": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "fillQuoteAddressIdInSalesOrderAddressByType,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Sales/Setup/Patch/Data/FillQuoteAddressIdInSalesOrderAddress.php#109": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "getCookiesMessages,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Theme/Controller/Result/MessagePlugin.php#207": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "execute,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/MediaGallery/Model/Keyword/Command/GetAssetKeywords.php#66": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "_collectEntitiesFromString,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Module/Di/Code/Scanner/XmlInterceptorScanner.php#34": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "cleanCustomerVisitorTable,/home/ubuntu/Desktop/projects/magento2/app/code/Magento/Customer/Setup/Patch/Data/SessionIDColumnCleanUp.php#66": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "persist,/home/ubuntu/Desktop/projects/magento2/lib/internal/Magento/Framework/Setup/XmlPersistor.php#19": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  },
+  "cleanupFilesystem,/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Console/Command/DiCompileCommand.php#327": {
+    "decorators_to_add": [
+      "📩"
+    ],
+    "decorators_to_remove": []
+  }
+}
