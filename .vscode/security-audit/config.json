@@ -1,0 +1,117 @@
+{
+  "max_iterations": 200,
+  "max_task_depth": 15,
+  "max_hotspot_tasks_per_meta": 5,
+  "stop_on_critical": false,
+  "task_timeout_minutes": 360,
+  "stall_timeout_minutes": 20,
+  "validation": {
+    "_description": "Adversarial validation phase settings",
+    "enabled": true,
+    "auto_reject_hard_fails": true,
+    "validate_severity": [
+      "critical",
+      "high",
+      "medium"
+    ]
+  },
+  "debug_mode": {
+    "_description": "Debug mode for tooling efficiency analysis",
+    "enabled": false,
+    "tooling_log_file": "debug/tooling_log.jsonl",
+    "suggestions_file": "debug/suggestions.md"
+  },
+  "reprioritization": {
+    "_description": "Periodic task reprioritization settings. Reprioritization is bidirectional: it can remove/merge redundant tasks AND spawn new tasks to deepen coverage of under-investigated areas.",
+    "interval": 10,
+    "prioritize_discovery": true,
+    "discovery_task_types": [
+      "discovery",
+      "recon",
+      "scan"
+    ]
+  },
+  "compliance_frameworks": {
+    "_description": "Enable checks for specific compliance requirements",
+    "enabled": [],
+    "available": [
+      "pci-dss",
+      "hipaa",
+      "gdpr",
+      "soc2",
+      "owasp-top10"
+    ]
+  },
+  "scope": {
+    "include_patterns": [
+      "**/*"
+    ],
+    "exclude_patterns": [
+      "**/node_modules/**",
+      "**/vendor/**",
+      "**/.git/**",
+      "**/test/**",
+      "**/tests/**",
+      "**/__tests__/**",
+      "**/*_test.go",
+      "**/*_test.py",
+      "**/*.test.ts",
+      "**/*.test.js",
+      "**/*.spec.ts",
+      "**/*.spec.js",
+      "**/dist/**",
+      "**/build/**",
+      "**/.venv/**",
+      "**/venv/**"
+    ]
+  },
+  "taint_analysis": {
+    "_description": "Post-discovery taint analysis settings. Runs after discovery tasks complete to generate taint data with the complete call graph.",
+    "exclude_paths": [],
+    "extra_args": [],
+    "timeout_minutes": 30
+  },
+  "findings_confidence_threshold": 0.4,
+  "target_project_path": "/home/ubuntu/Desktop/projects/magento2",
+  "mcp_tools_available": [
+    "get_context",
+    "get_scope_context",
+    "get_callers",
+    "get_callees",
+    "search",
+    "trace_parameter_flow",
+    "get_param_to_state_flows",
+    "get_taint_summary",
+    "get_tainted_functions",
+    "paths_to_sinks",
+    "paths_from_entries",
+    "find_path",
+    "get_call_chain_context",
+    "find_related_functions",
+    "find_security_patterns",
+    "get_pre_analysis",
+    "get_detector_summary",
+    "get_detector_findings",
+    "validate_detector_finding",
+    "update_detector_finding",
+    "batch_validate_detector_findings",
+    "batch_update_findings",
+    "get_audit_status",
+    "mark_reviewed",
+    "get_unvisited",
+    "reset_visit_tracking",
+    "discover_attack_surface",
+    "add_learned_pattern",
+    "get_learned_patterns",
+    "get_scope_security_checklist",
+    "get_audit_finding",
+    "list_audit_findings",
+    "resolve_locations",
+    "add_function",
+    "add_relationship",
+    "get_analysis_brief",
+    "get_consistency_analysis",
+    "trace_state_flow",
+    "get_state_interactions"
+  ]
+}

@@ -1,0 +1,12 @@
+.git
+.idea
+.vscode
+generated/code
+generated/metadata
+var/cache
+var/log
+var/page_cache
+var/session
+var/tmp
+vendor
+node_modules

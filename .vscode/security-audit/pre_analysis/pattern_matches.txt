@@ -1,0 +1,118 @@
+eval\(|exec\(|system\(|passthru\(|||PHP code execution|||45
+unserialize\(|||PHP deserialization|||202
+include.*\$|require.*\$|||PHP file inclusion|||324
+shell_exec\(|popen\(|proc_open\(|`.*\$|||PHP shell execution|||35
+curl_init|file_get_contents\(.*http|fopen\(.*http|||PHP HTTP client (SSRF)|||3
+GuzzleHttp|||PHP Guzzle (SSRF)|||3
+==\s*\$_|strcmp\(|in_array\(|||PHP type juggling (loose == treats '0e...' hashes as equal)|||757
+__wakeup|__destruct|__toString|||PHP magic methods|||107
+realpath\(|basename\(.*\$_|||PHP path functions (realpath race, basename null byte on old PHP)|||35
+extract\(\$_|extract\(\$request|||PHP extract() with user input (variable overwrite - can override auth vars)|||1
+parse_str\(|||PHP parse_str (variable injection without second arg)|||13
+preg_replace\(.*\/e|||PHP preg_replace /e modifier (code execution - deprecated)|||1
+assert\(.*\$|||PHP assert() with variable (code execution in PHP < 8.0)|||1
+md5\(|sha1\(|crypt\(|||PHP weak hashing (md5/sha1/crypt)|||104
+simplexml_load_string\(|simplexml_load_file\(|DOMDocument.*loadXML|xml_parse\(|||PHP XML parsing (XXE)|||15
+libxml_disable_entity_loader|LIBXML_NOENT|||PHP XXE configuration|||1
+move_uploaded_file\(|\$_FILES|||PHP file upload handling (path traversal if filename not sanitized)|||16
+==\s*["\x27]0e|==\s*"0"\s*|===\s*false\b|||PHP magic hash / type juggling (0e-prefixed MD5 == 0; use === and hash_equals() for secret comparison)|||247
+password|secret|api.?key|token|||Potential hardcoded secrets|||627
+redirect|return.*url|next=|||Redirect parameters|||621
+SELECT.*FROM.*WHERE|INSERT INTO|UPDATE.*SET|||SQL queries|||17
+postMessage|addEventListener.*message|||postMessage usage|||24
+cors|Access-Control|||CORS configuration|||1
+http://(?!localhost|127\.0\.0\.1)|||Non-HTTPS URLs|||2
+location\.href\s*=|location\.assign\(|location\.replace\(|window\.open\(|||Client-side navigation (open redirect risk)|||23
+document\.cookie|||document.cookie access (check httpOnly flag on sensitive cookies)|||24
+\.(innerHTML|outerHTML)\s*=|||innerHTML/outerHTML assignment (DOM XSS)|||26
+login|authenticate|signin|verify.*password|||Authentication functions|||432
+logout|signout|invalidate.*session|||Session termination|||74
+session.*secret|SESSION_SECRET|cookie.*secret|||Session configuration|||1
+oauth|OAuth|/authorize|/token|/callback|||OAuth endpoints|||69
+isAdmin|hasRole|canAccess|authorize|||Authorization checks|||117
+user_id|userId|owner_id|tenant_id|||Resource ownership fields|||131
+findById\(|find_by_id\(|getById\(|get_by_id\(|findOne\(.*id|||Object lookup by ID (IDOR)|||258
+role|permission|privilege|is_staff|is_superuser|||Privilege fields|||315
+url.*=.*req|webhook.*url|callback.*url|||URL from request|||34
+image.*url|avatar.*url|download.*url|||Media URL parameters|||92
+ImageMagick|GraphicsMagick|convert.*http|mogrify|||ImageMagick/GM (SSRF + RCE via delegates, ImageTragick CVE-2016-3714)|||7
+file://|gopher://|dict://|ldap://|||Non-HTTP protocol schemes (SSRF bypass: file=LFR, gopher=raw TCP to Redis/SMTP)|||1
+selenium|webdriver|driver\.get|driver\.navigate|chromedp|splash|||Headless browser/Selenium (SSRF via browser navigation)|||1
+svg.*xlink:href|svg.*href.*=|image.*href|||SVG external references (SSRF via uploaded SVG files)|||27
+sendmail|send_mail|send_email|smtp\.send|nodemailer|ActionMailer|||Email sending functions (check for header injection via CRLF)|||18
+graphql|GraphQL|ApolloServer|makeExecutableSchema|buildSchema|||GraphQL usage (check depth limiting, query cost analysis, introspection)|||336
+introspection.*true|enableIntrospection|introspectionQuery|__schema\b|||GraphQL introspection enabled (info disclosure if in production)|||1
+depthLimit|queryComplexity|costAnalysis|maxDepth|||GraphQL depth/cost limiting (SAFE indicator)|||3
+proxy_pass|ProxyPass|reverse_proxy|upstream|||Reverse proxy config (CL/TE desync attack surface)|||2
+request\.host|req\.headers\.host|HTTP_HOST|getServerName|||Host header usage (check if used to build URLs in emails/redirects)|||6
+Math\.random\s*\(|||JavaScript Math.random() (predictable PRNG, use crypto.randomBytes for tokens/secrets)|||1
+\brand\s*\(|mt_rand\s*\(|uniqid\s*\(|||PHP rand/mt_rand/uniqid (predictable, use random_bytes/random_int)|||49
+SecureRandom|crypto\.randomBytes|secrets\.|random_bytes\(|crypto/rand|||Secure random usage (SAFE indicator)|||6
+csrf_token|csrfToken|_csrf|XSRF-TOKEN|anti.forgery|AntiForgeryToken|||CSRF token usage (SAFE indicator — verify on all state-changing endpoints)|||4
+csrf_exempt|@csrf_exempt|disable.*csrf|IgnoreAntiforgery|skip_forgery_protection|||CSRF protection DISABLED (verify intentional — API-only?)|||1
+SameSite.*None|samesite.*none|||Cookie SameSite=None (CSRF risk without separate CSRF tokens)|||2
+DES\b|3DES|TripleDES|DESede|RC4|Blowfish|RC2|||Weak cipher algorithm (DES/3DES/RC4/Blowfish)|||10
+ECB|MODE_ECB|CipherMode\.ECB|AES/ECB|||ECB cipher mode (deterministic — no semantic security)|||5
+origin.*=.*req.*header|setHeader.*Allow-Origin.*origin|||Reflected origin in CORS (equivalent to wildcard + credentials)|||1
+redirect\s*\(\s*['"]//|return_url.*=.*//|next.*=.*//|url.*=.*['"]//|href.*=.*['"]//|src.*=.*['"]//|location.*=.*['"]|||Protocol-relative URL in redirect/link (//evil.com bypasses http-prefix checks — validate scheme AND host, reject // prefix)|||64
+csv\.writer|csv\.DictWriter|\.writerow\s*\(|\.to_csv\s*\(|csvwriter\.write|fputcsv\s*\(|CSV\.generate|to_csv|||CSV output (formula injection risk — cells starting with =,+,-,@ are evaluated by spreadsheet apps; sanitize or prefix with single quote)|||7
+rate.limit|rateLimit|RateLimiter|rate_limit|@[Tt]hrottle|||Rate limiting (SAFE indicator — verify on auth, API, and upload endpoints)|||15
+max_attempts|MAX_ATTEMPTS|lockout|account_locked|failed_login_count|||Login attempt limiting (SAFE indicator — check for bypass)|||6
+stackTrace|stack_trace|printStackTrace|traceback\.format|||Stack trace generation (check if exposed to client)|||4
+display_errors|error_reporting\(E_ALL\)|showException|||Verbose error display configuration|||2
+\block\(|\bLock\(|Mutex|RWMutex|sync\.Map|||Locking primitives (concurrency-aware code)|||86
+fields\s*=.*__all__|exclude\s*=\s*\[\]|exclude\s*=\s*\(\)|||Django model form __all__ or empty exclude (mass assignment)|||5
+X-Frame-Options|frame-ancestors|Content-Security-Policy|Strict-Transport-Security|||Security headers (SAFE indicator — check completeness)|||7
+HttpOnly|Secure|SameSite|||Cookie security attributes (SAFE indicator — check all cookies)|||206
+new RegExp\(|re\.compile\(|Regex\(|Pattern\.compile\(|||Dynamic regex compilation (ReDoS if user-controlled, CWE-1333)|||33
+(\\w\+|\\d\+|\\S\+|\[a-z\]\+).*\1|||Nested quantifiers in regex (ReDoS risk)|||15
+limit.*=.*req|per_page.*=.*params|page_size.*=.*request|||User-controlled pagination limit (unbounded query risk)|||3
+zipfile|ZipFile|tar\.open|unzip|gunzip|decompress|||Archive extraction (zip bomb / zip slip risk)|||4
+_attributes.*_id|_id.*_attributes|||Same resource accessible via nested attributes AND flat ID param (verify both paths validated)|||36
+session_regenerate_id|regenerateId|reset_session|rotate_session_token|||Session fixation prevention (SAFE indicator — verify called after login)|||10
+session_destroy|session\.destroy|req\.session\.destroy|Session\.Abandon|||Session invalidation (check called on logout AND password change)|||1
+session\.timeout|SESSION_COOKIE_AGE|session\.gc_maxlifetime|session_expiry|||Session timeout configuration (verify reasonable duration)|||1
+session_id.*url|sid=.*&|JSESSIONID.*[?&]|||Session token in URL (UNSAFE — exposed in referrer/logs)|||1
+catch.*\{[\s]*\}|except.*pass$|rescue\s*$|||Silent exception swallowing (correlates with fail-open GAP-01)|||6
+timeout.*=.*None|timeout.*=.*0[^.]|||Missing timeout on external API calls (DoS/hang risk)|||14
+/api/v[0-9]+/|/v[0-9]+/api/|||API versioning (check deprecated versions still accessible)|||1
+/debug/|/test/|/internal/|/_admin|/swagger|/graphiql|/playground|||Debug/internal endpoints (verify not exposed in production)|||22
+@deprecated|#\s*deprecated|||Deprecated code still present (check if deprecated endpoints still routable)|||1018
+@ApiExplorer.*false|@Hidden|exclude_from_schema|hidden.*=.*true|||Hidden API endpoints (verify auth still enforced on hidden routes)|||4
+X-Content-Type-Options|nosniff|||Content type sniffing protection (SAFE indicator)|||1
+upload.*public|static.*upload|webroot.*upload|||Uploads stored in web-accessible directory (path traversal + execution risk)|||10
+original.*filename|\.filename|getOriginalFilename|||Original filename preserved (path traversal risk — should randomize)|||25
+urllib\.parse|urlparse|URL\(|new URL|url\.Parse|||URL parsing (check for multi-parser inconsistency)|||4
+content.type.*boundary|Transfer-Encoding.*chunked|||HTTP parsing ambiguity indicators (CL/TE smuggling surface)|||1
+verify.*=.*false|verify.*=.*False|\{.*verify:.*false|||JWT verification disabled (CRITICAL — auth bypass)|||1
+Cache-Control|Vary|CDN-Cache|X-Cache|cf-cache-status|||Cache header configuration (review for correctness on sensitive endpoints)|||17
+password.*==.*["']|secret.*==.*["']admin|||Hardcoded credential comparison (backdoor account check)|||4
+nosec|nolint.*sec|noinspection.*Secur|@SuppressWarnings.*security|#.*noqa.*S|||Security linter suppression (explicitly disabled security check)|||9
+UNSAFE|INSECURE|DO.NOT.USE.IN.PROD|DANGER|XXX.*secur|||Explicit unsafe/insecure marker (developer-flagged insecure code)|||4
+temporary.*password|temp.*token|placeholder.*key|dummy.*secret|||Temporary credential placeholder (may still be in production code)|||39
+exiftool|ExifTool|exif_read_data|PIL\.ExifTags|exif-js|||ExifTool/EXIF processing (RCE via crafted metadata — CVE-2021-22204)|||3
+ImageMagick|convert\s|identify\s|mogrify|MagickWand|Imagick|||ImageMagick processing (ImageTragick CVE-2016-3714, SSRF via MVG/SVG)|||110
+redirect_uri|redirect_url|callback_url|return_uri|||OAuth redirect parameter (token theft via open redirect, Referer leak)|||12
+CloudFront|Cloudflare|Akamai|Fastly|Varnish|X-Cache|||CDN/cache layer references (cache deception, smuggling surface)|||29
+Cache-Control.*no-store|Cache-Control.*private|Vary.*Cookie|||Cache-Control headers on sensitive responses (verify coverage)|||4
+docker-compose|ports:|networks:|||Docker Compose / container network config (port mapping, topology)|||67
+unsafe\w*\s*=\s*(new Set|new Map|\[)|forbidden\w*\s*=\s*(new Set|new Map|\[)|deny\w*\s*=\s*(new Set|new Map|\[)|block\w*\s*=\s*(new Set|new Map|\[)|||Denylist/blocklist implementation (bypass risk — verify type-safe comparison and completeness)|||11
+allow\w*\s*=\s*(new Set|new Map|\[)|whitelist\s*=\s*(new Set|new Map|\[)|safelist\s*=\s*(new Set|new Map|\[)|permitted\s*=\s*(new Set|new Map|\[)|||Allowlist/whitelist implementation (verify completeness and type-safe membership test)|||80
+\.has\(.*\)|\.includes\(.*\)|indexOf\(.*\)\s*[!=]|||Set/Array membership check (security decision? verify input type matches collection type)|||27
+isSafe\w*|isValid\w*|isAllowed\w*|isDangerous\w*|isForbidden\w*|||Security gate function (verify runtime type enforcement on parameters — TS/Python types are NOT runtime checks)|||770
+[^!=]=[^=].*==\s|[^!]=\s.*==[^=]|||Loose equality in JS/TS (type coercion bypass — use === for security checks)|||988
+strcmp\(|strcasecmp\(|in_array\(|||PHP type juggling targets (strcmp returns 0 for non-string, in_array loose by default)|||766
+is_numeric\(|intval\(|floatval\(|settype\(|||PHP type casting (verify no security check precedes the cast)|||188
+parseInt\(|Number\(|Boolean\(|||JS type coercion functions (NaN propagation? parseInt('123abc')=123 truncation?)|||150
+as\s+\w+[^.]|<\w+>\s*\w+|type\s+assertion|||Type assertion/cast without validation (TS 'as', Java/C# cast — verify input validated first)|||4238
+JSON\.parse\(.*reviver|JSON\.parse\(|||JSON parsing (reviver can transform types; parsed object may have unexpected prototype/type)|||1
+isinstance\(|type\(.*\)\s*(==|!=|is )|||Python type check (verify covers all subclasses; __class__ can be spoofed on old-style classes)|||1
+int\(.*request|float\(.*request|str\(.*\.\s*encode|\.decode\(|||Python type coercion from user input (ValueError on malformed? str vs bytes confusion?)|||1
+\.equals\(|==\s*new\s|==\s*Integer|==\s*Long|==\s*Boolean|||Java equality check (== on boxed types compares references not values — use .equals())|||2
+instanceof\s+\w+[^{]*[{;]|||Java instanceof check (verify checked fields too — instanceof alone doesn't guarantee safe state)|||612
+\bas\b\s+\w+|\.Cast<|\(.*\)\s*\w+\s*;|||C# type cast (as returns null on failure — null check after? explicit cast throws — caught?)|||2919
+dynamic\s+\w+|ExpandoObject|Convert\.To|||C# dynamic typing (runtime binding — no compile-time type safety on security operations)|||52
+\.send\(|\.public_send\(|method\(|\.respond_to\?|||Ruby dynamic dispatch (send bypasses visibility — public_send is safer but still type-confused)|||145
+==\s*|\.eql\?\(|\.equal\?\(|\.is_a\?\(|\.kind_of\?|||Ruby equality/type check (== uses coercion, eql? doesn't — which is used in security checks?)|||3780
+\.to_i\b|\.to_s\b|\.to_f\b|Integer\(|Float\(|||Ruby type coercion (to_i silently returns 0 for non-numeric — security check bypass?)|||3
+Proxy\(|Reflect\.|Symbol\.|WeakRef\(|||Metaprogramming primitives (Proxy/Reflect can intercept security checks)|||5

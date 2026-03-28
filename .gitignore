@@ -72,3 +72,13 @@ atlassian*
 /generated/*
 !/generated/.htaccess
 .DS_Store
+
+# Security audit - exclude large binary analysis files
+.vscode/ext-static-analysis/static-analysis-context.db
+.vscode/ext-static-analysis/functions_html.json
+.vscode/ext-static-analysis/scope_summaries_html.json
+.vscode/ext-static-analysis/decorations.json
+.vscode/ext-static-analysis/cache/
+.vscode/taint-analysis/taints.db
+# Per-module static analysis caches
+app/code/**/.vscode/

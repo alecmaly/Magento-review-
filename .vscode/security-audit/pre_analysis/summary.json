@@ -1,0 +1,808 @@
+{
+  "target_project": "/home/ubuntu/Desktop/projects/magento2",
+  "detected_technologies": [
+    "php"
+  ],
+  "pattern_matches": [
+    {
+      "pattern": "as\\s+\\w+[^.]|<\\w+>\\s*\\w+|type\\s+assertion",
+      "vulnerability": "Type assertion/cast without validation (TS 'as', Java/C# cast \u2014 verify input validated first)",
+      "file_count": 4238
+    },
+    {
+      "pattern": "==\\s*|\\.eql\\?\\(|\\.equal\\?\\(|\\.is_a\\?\\(|\\.kind_of\\?",
+      "vulnerability": "Ruby equality/type check (== uses coercion, eql? doesn't \u2014 which is used in security checks?)",
+      "file_count": 3780
+    },
+    {
+      "pattern": "\\bas\\b\\s+\\w+|\\.Cast<|\\(.*\\)\\s*\\w+\\s*;",
+      "vulnerability": "C# type cast (as returns null on failure \u2014 null check after? explicit cast throws \u2014 caught?)",
+      "file_count": 2919
+    },
+    {
+      "pattern": "@deprecated|#\\s*deprecated",
+      "vulnerability": "Deprecated code still present (check if deprecated endpoints still routable)",
+      "file_count": 1018
+    },
+    {
+      "pattern": "[^!=]=[^=].*==\\s|[^!]=\\s.*==[^=]",
+      "vulnerability": "Loose equality in JS/TS (type coercion bypass \u2014 use === for security checks)",
+      "file_count": 988
+    },
+    {
+      "pattern": "isSafe\\w*|isValid\\w*|isAllowed\\w*|isDangerous\\w*|isForbidden\\w*",
+      "vulnerability": "Security gate function (verify runtime type enforcement on parameters \u2014 TS/Python types are NOT runtime checks)",
+      "file_count": 770
+    },
+    {
+      "pattern": "strcmp\\(|strcasecmp\\(|in_array\\(",
+      "vulnerability": "PHP type juggling targets (strcmp returns 0 for non-string, in_array loose by default)",
+      "file_count": 766
+    },
+    {
+      "pattern": "==\\s*\\$_|strcmp\\(|in_array\\(",
+      "vulnerability": "PHP type juggling (loose == treats '0e...' hashes as equal)",
+      "file_count": 757
+    },
+    {
+      "pattern": "password|secret|api.?key|token",
+      "vulnerability": "Potential hardcoded secrets",
+      "file_count": 627
+    },
+    {
+      "pattern": "redirect|return.*url|next=",
+      "vulnerability": "Redirect parameters",
+      "file_count": 621
+    },
+    {
+      "pattern": "instanceof\\s+\\w+[^{]*[{;]",
+      "vulnerability": "Java instanceof check (verify checked fields too \u2014 instanceof alone doesn't guarantee safe state)",
+      "file_count": 612
+    },
+    {
+      "pattern": "login|authenticate|signin|verify.*password",
+      "vulnerability": "Authentication functions",
+      "file_count": 432
+    },
+    {
+      "pattern": "graphql|GraphQL|ApolloServer|makeExecutableSchema|buildSchema",
+      "vulnerability": "GraphQL usage (check depth limiting, query cost analysis, introspection)",
+      "file_count": 336
+    },
+    {
+      "pattern": "include.*\\$|require.*\\$",
+      "vulnerability": "PHP file inclusion",
+      "file_count": 324
+    },
+    {
+      "pattern": "role|permission|privilege|is_staff|is_superuser",
+      "vulnerability": "Privilege fields",
+      "file_count": 315
+    },
+    {
+      "pattern": "findById\\(|find_by_id\\(|getById\\(|get_by_id\\(|findOne\\(.*id",
+      "vulnerability": "Object lookup by ID (IDOR)",
+      "file_count": 258
+    },
+    {
+      "pattern": "==\\s*[\"\\x27]0e|==\\s*\"0\"\\s*|===\\s*false\\b",
+      "vulnerability": "PHP magic hash / type juggling (0e-prefixed MD5 == 0; use === and hash_equals() for secret comparison)",
+      "file_count": 247
+    },
+    {
+      "pattern": "HttpOnly|Secure|SameSite",
+      "vulnerability": "Cookie security attributes (SAFE indicator \u2014 check all cookies)",
+      "file_count": 206
+    },
+    {
+      "pattern": "unserialize\\(",
+      "vulnerability": "PHP deserialization",
+      "file_count": 202
+    },
+    {
+      "pattern": "is_numeric\\(|intval\\(|floatval\\(|settype\\(",
+      "vulnerability": "PHP type casting (verify no security check precedes the cast)",
+      "file_count": 188
+    },
+    {
+      "pattern": "parseInt\\(|Number\\(|Boolean\\(",
+      "vulnerability": "JS type coercion functions (NaN propagation? parseInt('123abc')=123 truncation?)",
+      "file_count": 150
+    },
+    {
+      "pattern": "\\.send\\(|\\.public_send\\(|method\\(|\\.respond_to\\?",
+      "vulnerability": "Ruby dynamic dispatch (send bypasses visibility \u2014 public_send is safer but still type-confused)",
+      "file_count": 145
+    },
+    {
+      "pattern": "user_id|userId|owner_id|tenant_id",
+      "vulnerability": "Resource ownership fields",
+      "file_count": 131
+    },
+    {
+      "pattern": "isAdmin|hasRole|canAccess|authorize",
+      "vulnerability": "Authorization checks",
+      "file_count": 117
+    },
+    {
+      "pattern": "ImageMagick|convert\\s|identify\\s|mogrify|MagickWand|Imagick",
+      "vulnerability": "ImageMagick processing (ImageTragick CVE-2016-3714, SSRF via MVG/SVG)",
+      "file_count": 110
+    },
+    {
+      "pattern": "__wakeup|__destruct|__toString",
+      "vulnerability": "PHP magic methods",
+      "file_count": 107
+    },
+    {
+      "pattern": "md5\\(|sha1\\(|crypt\\(",
+      "vulnerability": "PHP weak hashing (md5/sha1/crypt)",
+      "file_count": 104
+    },
+    {
+      "pattern": "image.*url|avatar.*url|download.*url",
+      "vulnerability": "Media URL parameters",
+      "file_count": 92
+    },
+    {
+      "pattern": "\\block\\(|\\bLock\\(|Mutex|RWMutex|sync\\.Map",
+      "vulnerability": "Locking primitives (concurrency-aware code)",
+      "file_count": 86
+    },
+    {
+      "pattern": "allow\\w*\\s*=\\s*(new Set|new Map|\\[)|whitelist\\s*=\\s*(new Set|new Map|\\[)|safelist\\s*=\\s*(new Set|new Map|\\[)|permitted\\s*=\\s*(new Set|new Map|\\[)",
+      "vulnerability": "Allowlist/whitelist implementation (verify completeness and type-safe membership test)",
+      "file_count": 80
+    },
+    {
+      "pattern": "logout|signout|invalidate.*session",
+      "vulnerability": "Session termination",
+      "file_count": 74
+    },
+    {
+      "pattern": "oauth|OAuth|/authorize|/token|/callback",
+      "vulnerability": "OAuth endpoints",
+      "file_count": 69
+    },
+    {
+      "pattern": "docker-compose|ports:|networks:",
+      "vulnerability": "Docker Compose / container network config (port mapping, topology)",
+      "file_count": 67
+    },
+    {
+      "pattern": "redirect\\s*\\(\\s*['\"]//|return_url.*=.*//|next.*=.*//|url.*=.*['\"]//|href.*=.*['\"]//|src.*=.*['\"]//|location.*=.*['\"]",
+      "vulnerability": "Protocol-relative URL in redirect/link (//evil.com bypasses http-prefix checks \u2014 validate scheme AND host, reject // prefix)",
+      "file_count": 64
+    },
+    {
+      "pattern": "dynamic\\s+\\w+|ExpandoObject|Convert\\.To",
+      "vulnerability": "C# dynamic typing (runtime binding \u2014 no compile-time type safety on security operations)",
+      "file_count": 52
+    },
+    {
+      "pattern": "\\brand\\s*\\(|mt_rand\\s*\\(|uniqid\\s*\\(",
+      "vulnerability": "PHP rand/mt_rand/uniqid (predictable, use random_bytes/random_int)",
+      "file_count": 49
+    },
+    {
+      "pattern": "eval\\(|exec\\(|system\\(|passthru\\(",
+      "vulnerability": "PHP code execution",
+      "file_count": 45
+    },
+    {
+      "pattern": "temporary.*password|temp.*token|placeholder.*key|dummy.*secret",
+      "vulnerability": "Temporary credential placeholder (may still be in production code)",
+      "file_count": 39
+    },
+    {
+      "pattern": "_attributes.*_id|_id.*_attributes",
+      "vulnerability": "Same resource accessible via nested attributes AND flat ID param (verify both paths validated)",
+      "file_count": 36
+    },
+    {
+      "pattern": "shell_exec\\(|popen\\(|proc_open\\(|`.*\\$",
+      "vulnerability": "PHP shell execution",
+      "file_count": 35
+    },
+    {
+      "pattern": "realpath\\(|basename\\(.*\\$_",
+      "vulnerability": "PHP path functions (realpath race, basename null byte on old PHP)",
+      "file_count": 35
+    },
+    {
+      "pattern": "url.*=.*req|webhook.*url|callback.*url",
+      "vulnerability": "URL from request",
+      "file_count": 34
+    },
+    {
+      "pattern": "new RegExp\\(|re\\.compile\\(|Regex\\(|Pattern\\.compile\\(",
+      "vulnerability": "Dynamic regex compilation (ReDoS if user-controlled, CWE-1333)",
+      "file_count": 33
+    },
+    {
+      "pattern": "CloudFront|Cloudflare|Akamai|Fastly|Varnish|X-Cache",
+      "vulnerability": "CDN/cache layer references (cache deception, smuggling surface)",
+      "file_count": 29
+    },
+    {
+      "pattern": "svg.*xlink:href|svg.*href.*=|image.*href",
+      "vulnerability": "SVG external references (SSRF via uploaded SVG files)",
+      "file_count": 27
+    },
+    {
+      "pattern": "\\.has\\(.*\\)|\\.includes\\(.*\\)|indexOf\\(.*\\)\\s*[!=]",
+      "vulnerability": "Set/Array membership check (security decision? verify input type matches collection type)",
+      "file_count": 27
+    },
+    {
+      "pattern": "\\.(innerHTML|outerHTML)\\s*=",
+      "vulnerability": "innerHTML/outerHTML assignment (DOM XSS)",
+      "file_count": 26
+    },
+    {
+      "pattern": "original.*filename|\\.filename|getOriginalFilename",
+      "vulnerability": "Original filename preserved (path traversal risk \u2014 should randomize)",
+      "file_count": 25
+    },
+    {
+      "pattern": "postMessage|addEventListener.*message",
+      "vulnerability": "postMessage usage",
+      "file_count": 24
+    },
+    {
+      "pattern": "document\\.cookie",
+      "vulnerability": "document.cookie access (check httpOnly flag on sensitive cookies)",
+      "file_count": 24
+    },
+    {
+      "pattern": "location\\.href\\s*=|location\\.assign\\(|location\\.replace\\(|window\\.open\\(",
+      "vulnerability": "Client-side navigation (open redirect risk)",
+      "file_count": 23
+    },
+    {
+      "pattern": "/debug/|/test/|/internal/|/_admin|/swagger|/graphiql|/playground",
+      "vulnerability": "Debug/internal endpoints (verify not exposed in production)",
+      "file_count": 22
+    },
+    {
+      "pattern": "sendmail|send_mail|send_email|smtp\\.send|nodemailer|ActionMailer",
+      "vulnerability": "Email sending functions (check for header injection via CRLF)",
+      "file_count": 18
+    },
+    {
+      "pattern": "SELECT.*FROM.*WHERE|INSERT INTO|UPDATE.*SET",
+      "vulnerability": "SQL queries",
+      "file_count": 17
+    },
+    {
+      "pattern": "Cache-Control|Vary|CDN-Cache|X-Cache|cf-cache-status",
+      "vulnerability": "Cache header configuration (review for correctness on sensitive endpoints)",
+      "file_count": 17
+    },
+    {
+      "pattern": "move_uploaded_file\\(|\\$_FILES",
+      "vulnerability": "PHP file upload handling (path traversal if filename not sanitized)",
+      "file_count": 16
+    },
+    {
+      "pattern": "simplexml_load_string\\(|simplexml_load_file\\(|DOMDocument.*loadXML|xml_parse\\(",
+      "vulnerability": "PHP XML parsing (XXE)",
+      "file_count": 15
+    },
+    {
+      "pattern": "rate.limit|rateLimit|RateLimiter|rate_limit|@[Tt]hrottle",
+      "vulnerability": "Rate limiting (SAFE indicator \u2014 verify on auth, API, and upload endpoints)",
+      "file_count": 15
+    },
+    {
+      "pattern": "(\\\\w\\+|\\\\d\\+|\\\\S\\+|\\[a-z\\]\\+).*\\1",
+      "vulnerability": "Nested quantifiers in regex (ReDoS risk)",
+      "file_count": 15
+    },
+    {
+      "pattern": "timeout.*=.*None|timeout.*=.*0[^.]",
+      "vulnerability": "Missing timeout on external API calls (DoS/hang risk)",
+      "file_count": 14
+    },
+    {
+      "pattern": "parse_str\\(",
+      "vulnerability": "PHP parse_str (variable injection without second arg)",
+      "file_count": 13
+    },
+    {
+      "pattern": "redirect_uri|redirect_url|callback_url|return_uri",
+      "vulnerability": "OAuth redirect parameter (token theft via open redirect, Referer leak)",
+      "file_count": 12
+    },
+    {
+      "pattern": "unsafe\\w*\\s*=\\s*(new Set|new Map|\\[)|forbidden\\w*\\s*=\\s*(new Set|new Map|\\[)|deny\\w*\\s*=\\s*(new Set|new Map|\\[)|block\\w*\\s*=\\s*(new Set|new Map|\\[)",
+      "vulnerability": "Denylist/blocklist implementation (bypass risk \u2014 verify type-safe comparison and completeness)",
+      "file_count": 11
+    },
+    {
+      "pattern": "DES\\b|3DES|TripleDES|DESede|RC4|Blowfish|RC2",
+      "vulnerability": "Weak cipher algorithm (DES/3DES/RC4/Blowfish)",
+      "file_count": 10
+    },
+    {
+      "pattern": "session_regenerate_id|regenerateId|reset_session|rotate_session_token",
+      "vulnerability": "Session fixation prevention (SAFE indicator \u2014 verify called after login)",
+      "file_count": 10
+    },
+    {
+      "pattern": "upload.*public|static.*upload|webroot.*upload",
+      "vulnerability": "Uploads stored in web-accessible directory (path traversal + execution risk)",
+      "file_count": 10
+    },
+    {
+      "pattern": "nosec|nolint.*sec|noinspection.*Secur|@SuppressWarnings.*security|#.*noqa.*S",
+      "vulnerability": "Security linter suppression (explicitly disabled security check)",
+      "file_count": 9
+    },
+    {
+      "pattern": "ImageMagick|GraphicsMagick|convert.*http|mogrify",
+      "vulnerability": "ImageMagick/GM (SSRF + RCE via delegates, ImageTragick CVE-2016-3714)",
+      "file_count": 7
+    },
+    {
+      "pattern": "csv\\.writer|csv\\.DictWriter|\\.writerow\\s*\\(|\\.to_csv\\s*\\(|csvwriter\\.write|fputcsv\\s*\\(|CSV\\.generate|to_csv",
+      "vulnerability": "CSV output (formula injection risk \u2014 cells starting with =,+,-,@ are evaluated by spreadsheet apps; sanitize or prefix with single quote)",
+      "file_count": 7
+    },
+    {
+      "pattern": "X-Frame-Options|frame-ancestors|Content-Security-Policy|Strict-Transport-Security",
+      "vulnerability": "Security headers (SAFE indicator \u2014 check completeness)",
+      "file_count": 7
+    },
+    {
+      "pattern": "request\\.host|req\\.headers\\.host|HTTP_HOST|getServerName",
+      "vulnerability": "Host header usage (check if used to build URLs in emails/redirects)",
+      "file_count": 6
+    },
+    {
+      "pattern": "SecureRandom|crypto\\.randomBytes|secrets\\.|random_bytes\\(|crypto/rand",
+      "vulnerability": "Secure random usage (SAFE indicator)",
+      "file_count": 6
+    },
+    {
+      "pattern": "max_attempts|MAX_ATTEMPTS|lockout|account_locked|failed_login_count",
+      "vulnerability": "Login attempt limiting (SAFE indicator \u2014 check for bypass)",
+      "file_count": 6
+    },
+    {
+      "pattern": "catch.*\\{[\\s]*\\}|except.*pass$|rescue\\s*$",
+      "vulnerability": "Silent exception swallowing (correlates with fail-open GAP-01)",
+      "file_count": 6
+    },
+    {
+      "pattern": "ECB|MODE_ECB|CipherMode\\.ECB|AES/ECB",
+      "vulnerability": "ECB cipher mode (deterministic \u2014 no semantic security)",
+      "file_count": 5
+    },
+    {
+      "pattern": "fields\\s*=.*__all__|exclude\\s*=\\s*\\[\\]|exclude\\s*=\\s*\\(\\)",
+      "vulnerability": "Django model form __all__ or empty exclude (mass assignment)",
+      "file_count": 5
+    },
+    {
+      "pattern": "Proxy\\(|Reflect\\.|Symbol\\.|WeakRef\\(",
+      "vulnerability": "Metaprogramming primitives (Proxy/Reflect can intercept security checks)",
+      "file_count": 5
+    },
+    {
+      "pattern": "csrf_token|csrfToken|_csrf|XSRF-TOKEN|anti.forgery|AntiForgeryToken",
+      "vulnerability": "CSRF token usage (SAFE indicator \u2014 verify on all state-changing endpoints)",
+      "file_count": 4
+    },
+    {
+      "pattern": "stackTrace|stack_trace|printStackTrace|traceback\\.format",
+      "vulnerability": "Stack trace generation (check if exposed to client)",
+      "file_count": 4
+    },
+    {
+      "pattern": "zipfile|ZipFile|tar\\.open|unzip|gunzip|decompress",
+      "vulnerability": "Archive extraction (zip bomb / zip slip risk)",
+      "file_count": 4
+    },
+    {
+      "pattern": "@ApiExplorer.*false|@Hidden|exclude_from_schema|hidden.*=.*true",
+      "vulnerability": "Hidden API endpoints (verify auth still enforced on hidden routes)",
+      "file_count": 4
+    },
+    {
+      "pattern": "urllib\\.parse|urlparse|URL\\(|new URL|url\\.Parse",
+      "vulnerability": "URL parsing (check for multi-parser inconsistency)",
+      "file_count": 4
+    },
+    {
+      "pattern": "password.*==.*[\"']|secret.*==.*[\"']admin",
+      "vulnerability": "Hardcoded credential comparison (backdoor account check)",
+      "file_count": 4
+    },
+    {
+      "pattern": "UNSAFE|INSECURE|DO.NOT.USE.IN.PROD|DANGER|XXX.*secur",
+      "vulnerability": "Explicit unsafe/insecure marker (developer-flagged insecure code)",
+      "file_count": 4
+    },
+    {
+      "pattern": "Cache-Control.*no-store|Cache-Control.*private|Vary.*Cookie",
+      "vulnerability": "Cache-Control headers on sensitive responses (verify coverage)",
+      "file_count": 4
+    },
+    {
+      "pattern": "curl_init|file_get_contents\\(.*http|fopen\\(.*http",
+      "vulnerability": "PHP HTTP client (SSRF)",
+      "file_count": 3
+    },
+    {
+      "pattern": "GuzzleHttp",
+      "vulnerability": "PHP Guzzle (SSRF)",
+      "file_count": 3
+    },
+    {
+      "pattern": "depthLimit|queryComplexity|costAnalysis|maxDepth",
+      "vulnerability": "GraphQL depth/cost limiting (SAFE indicator)",
+      "file_count": 3
+    },
+    {
+      "pattern": "limit.*=.*req|per_page.*=.*params|page_size.*=.*request",
+      "vulnerability": "User-controlled pagination limit (unbounded query risk)",
+      "file_count": 3
+    },
+    {
+      "pattern": "exiftool|ExifTool|exif_read_data|PIL\\.ExifTags|exif-js",
+      "vulnerability": "ExifTool/EXIF processing (RCE via crafted metadata \u2014 CVE-2021-22204)",
+      "file_count": 3
+    },
+    {
+      "pattern": "\\.to_i\\b|\\.to_s\\b|\\.to_f\\b|Integer\\(|Float\\(",
+      "vulnerability": "Ruby type coercion (to_i silently returns 0 for non-numeric \u2014 security check bypass?)",
+      "file_count": 3
+    },
+    {
+      "pattern": "http://(?!localhost|127\\.0\\.0\\.1)",
+      "vulnerability": "Non-HTTPS URLs",
+      "file_count": 2
+    },
+    {
+      "pattern": "proxy_pass|ProxyPass|reverse_proxy|upstream",
+      "vulnerability": "Reverse proxy config (CL/TE desync attack surface)",
+      "file_count": 2
+    },
+    {
+      "pattern": "SameSite.*None|samesite.*none",
+      "vulnerability": "Cookie SameSite=None (CSRF risk without separate CSRF tokens)",
+      "file_count": 2
+    },
+    {
+      "pattern": "display_errors|error_reporting\\(E_ALL\\)|showException",
+      "vulnerability": "Verbose error display configuration",
+      "file_count": 2
+    },
+    {
+      "pattern": "\\.equals\\(|==\\s*new\\s|==\\s*Integer|==\\s*Long|==\\s*Boolean",
+      "vulnerability": "Java equality check (== on boxed types compares references not values \u2014 use .equals())",
+      "file_count": 2
+    },
+    {
+      "pattern": "extract\\(\\$_|extract\\(\\$request",
+      "vulnerability": "PHP extract() with user input (variable overwrite - can override auth vars)",
+      "file_count": 1
+    },
+    {
+      "pattern": "preg_replace\\(.*\\/e",
+      "vulnerability": "PHP preg_replace /e modifier (code execution - deprecated)",
+      "file_count": 1
+    },
+    {
+      "pattern": "assert\\(.*\\$",
+      "vulnerability": "PHP assert() with variable (code execution in PHP < 8.0)",
+      "file_count": 1
+    },
+    {
+      "pattern": "libxml_disable_entity_loader|LIBXML_NOENT",
+      "vulnerability": "PHP XXE configuration",
+      "file_count": 1
+    },
+    {
+      "pattern": "cors|Access-Control",
+      "vulnerability": "CORS configuration",
+      "file_count": 1
+    },
+    {
+      "pattern": "session.*secret|SESSION_SECRET|cookie.*secret",
+      "vulnerability": "Session configuration",
+      "file_count": 1
+    },
+    {
+      "pattern": "file://|gopher://|dict://|ldap://",
+      "vulnerability": "Non-HTTP protocol schemes (SSRF bypass: file=LFR, gopher=raw TCP to Redis/SMTP)",
+      "file_count": 1
+    },
+    {
+      "pattern": "selenium|webdriver|driver\\.get|driver\\.navigate|chromedp|splash",
+      "vulnerability": "Headless browser/Selenium (SSRF via browser navigation)",
+      "file_count": 1
+    },
+    {
+      "pattern": "introspection.*true|enableIntrospection|introspectionQuery|__schema\\b",
+      "vulnerability": "GraphQL introspection enabled (info disclosure if in production)",
+      "file_count": 1
+    },
+    {
+      "pattern": "Math\\.random\\s*\\(",
+      "vulnerability": "JavaScript Math.random() (predictable PRNG, use crypto.randomBytes for tokens/secrets)",
+      "file_count": 1
+    },
+    {
+      "pattern": "csrf_exempt|@csrf_exempt|disable.*csrf|IgnoreAntiforgery|skip_forgery_protection",
+      "vulnerability": "CSRF protection DISABLED (verify intentional \u2014 API-only?)",
+      "file_count": 1
+    },
+    {
+      "pattern": "origin.*=.*req.*header|setHeader.*Allow-Origin.*origin",
+      "vulnerability": "Reflected origin in CORS (equivalent to wildcard + credentials)",
+      "file_count": 1
+    },
+    {
+      "pattern": "session_destroy|session\\.destroy|req\\.session\\.destroy|Session\\.Abandon",
+      "vulnerability": "Session invalidation (check called on logout AND password change)",
+      "file_count": 1
+    },
+    {
+      "pattern": "session\\.timeout|SESSION_COOKIE_AGE|session\\.gc_maxlifetime|session_expiry",
+      "vulnerability": "Session timeout configuration (verify reasonable duration)",
+      "file_count": 1
+    },
+    {
+      "pattern": "session_id.*url|sid=.*&|JSESSIONID.*[?&]",
+      "vulnerability": "Session token in URL (UNSAFE \u2014 exposed in referrer/logs)",
+      "file_count": 1
+    },
+    {
+      "pattern": "/api/v[0-9]+/|/v[0-9]+/api/",
+      "vulnerability": "API versioning (check deprecated versions still accessible)",
+      "file_count": 1
+    },
+    {
+      "pattern": "X-Content-Type-Options|nosniff",
+      "vulnerability": "Content type sniffing protection (SAFE indicator)",
+      "file_count": 1
+    },
+    {
+      "pattern": "content.type.*boundary|Transfer-Encoding.*chunked",
+      "vulnerability": "HTTP parsing ambiguity indicators (CL/TE smuggling surface)",
+      "file_count": 1
+    },
+    {
+      "pattern": "verify.*=.*false|verify.*=.*False|\\{.*verify:.*false",
+      "vulnerability": "JWT verification disabled (CRITICAL \u2014 auth bypass)",
+      "file_count": 1
+    },
+    {
+      "pattern": "JSON\\.parse\\(.*reviver|JSON\\.parse\\(",
+      "vulnerability": "JSON parsing (reviver can transform types; parsed object may have unexpected prototype/type)",
+      "file_count": 1
+    },
+    {
+      "pattern": "isinstance\\(|type\\(.*\\)\\s*(==|!=|is )",
+      "vulnerability": "Python type check (verify covers all subclasses; __class__ can be spoofed on old-style classes)",
+      "file_count": 1
+    },
+    {
+      "pattern": "int\\(.*request|float\\(.*request|str\\(.*\\.\\s*encode|\\.decode\\(",
+      "vulnerability": "Python type coercion from user input (ValueError on malformed? str vs bytes confusion?)",
+      "file_count": 1
+    }
+  ],
+  "taint_sink_correlations": {
+    "critical": [
+      {
+        "source": "$e",
+        "sink": "onBootstrap",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Mvc/Bootstrap/InitParamListener.php",
+        "line": 77,
+        "category": "command_injection",
+        "severity": "CRITICAL",
+        "cwe": "CWE-78"
+      },
+      {
+        "source": "$e",
+        "sink": "onBootstrap",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Mvc/Bootstrap/InitParamListener.php",
+        "line": 78,
+        "category": "command_injection",
+        "severity": "CRITICAL",
+        "cwe": "CWE-78"
+      },
+      {
+        "source": "$initParams",
+        "sink": "createDirectoryList",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Mvc/Bootstrap/InitParamListener.php",
+        "line": 176,
+        "category": "command_injection",
+        "severity": "CRITICAL",
+        "cwe": "CWE-78"
+      },
+      {
+        "source": "$dbName",
+        "sink": "checkDatabaseName",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Validator/DbValidator.php",
+        "line": 145,
+        "category": "sql_injection",
+        "severity": "CRITICAL",
+        "cwe": "CWE-89"
+      },
+      {
+        "source": "$connection",
+        "sink": "checkDatabasePrivileges",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Validator/DbValidator.php",
+        "line": 189,
+        "category": "sql_injection",
+        "severity": "CRITICAL",
+        "cwe": "CWE-89"
+      },
+      {
+        "source": "$dbName",
+        "sink": "checkDatabasePrivileges",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Validator/DbValidator.php",
+        "line": 196,
+        "category": "sql_injection",
+        "severity": "CRITICAL",
+        "cwe": "CWE-89"
+      },
+      {
+        "source": "$connection",
+        "sink": "checkDatabasePrivileges",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Validator/DbValidator.php",
+        "line": 198,
+        "category": "sql_injection",
+        "severity": "CRITICAL",
+        "cwe": "CWE-89"
+      },
+      {
+        "source": "$this->listener",
+        "sink": "testCreateFilesystem",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Test/Unit/Mvc/Bootstrap/InitParamListenerTest.php",
+        "line": 251,
+        "category": "command_injection",
+        "severity": "CRITICAL",
+        "cwe": "CWE-78"
+      },
+      {
+        "source": "$this",
+        "sink": "testCreate",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Test/Unit/Module/DataSetupFactoryTest.php",
+        "line": 24,
+        "category": "command_injection",
+        "severity": "CRITICAL",
+        "cwe": "CWE-78"
+      },
+      {
+        "source": "$this",
+        "sink": "testCreate",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Test/Unit/Module/DataSetupFactoryTest.php",
+        "line": 30,
+        "category": "command_injection",
+        "severity": "CRITICAL",
+        "cwe": "CWE-78"
+      }
+    ],
+    "high": [
+      {
+        "source": "$connection",
+        "sink": "checkDatabasePrivileges",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Validator/DbValidator.php",
+        "line": 189,
+        "category": "ssrf",
+        "severity": "HIGH",
+        "cwe": "CWE-918"
+      },
+      {
+        "source": "$connection",
+        "sink": "checkDatabasePrivileges",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Validator/DbValidator.php",
+        "line": 198,
+        "category": "ssrf",
+        "severity": "HIGH",
+        "cwe": "CWE-918"
+      },
+      {
+        "source": "$this->phraseCollector",
+        "sink": "testParse",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Test/Unit/Module/I18n/Parser/Adapter/Php/Tokenizer/PhraseCollectorTest.php",
+        "line": 117,
+        "category": "file_operations",
+        "severity": "HIGH",
+        "cwe": "CWE-22"
+      },
+      {
+        "source": "$this->_testFile",
+        "sink": "testWrite",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Test/Unit/Module/I18n/Dictionary/Writer/CsvTest.php",
+        "line": 134,
+        "category": "file_operations",
+        "severity": "HIGH",
+        "cwe": "CWE-22"
+      },
+      {
+        "source": "$this->_testFile",
+        "sink": "testWriteWithoutContext",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Test/Unit/Module/I18n/Dictionary/Writer/CsvTest.php",
+        "line": 170,
+        "category": "file_operations",
+        "severity": "HIGH",
+        "cwe": "CWE-22"
+      },
+      {
+        "source": "$this",
+        "sink": "testLoadConfig",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Test/Unit/Fixtures/FixtureConfigTest.php",
+        "line": 49,
+        "category": "file_operations",
+        "severity": "HIGH",
+        "cwe": "CWE-22"
+      },
+      {
+        "source": "$this",
+        "sink": "testLoadConfig",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Test/Unit/Fixtures/FixtureConfigTest.php",
+        "line": 53,
+        "category": "file_operations",
+        "severity": "HIGH",
+        "cwe": "CWE-22"
+      },
+      {
+        "source": "$this->config",
+        "sink": "testGenerateQuotes",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Test/Unit/Fixtures/Quote/QuoteGeneratorTest.php",
+        "line": 180,
+        "category": "file_operations",
+        "severity": "HIGH",
+        "cwe": "CWE-22"
+      },
+      {
+        "source": "$this->readerMock",
+        "sink": "testBaseComposerJsonFileNotFound",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Test/Unit/Model/BasePackageInfoTest.php",
+        "line": 46,
+        "category": "file_operations",
+        "severity": "HIGH",
+        "cwe": "CWE-22"
+      },
+      {
+        "source": "$this->readerMock",
+        "sink": "testBaseComposerJsonFileNotReadable",
+        "file": "/home/ubuntu/Desktop/projects/magento2/setup/src/Magento/Setup/Test/Unit/Model/BasePackageInfoTest.php",
+        "line": 59,
+        "category": "file_operations",
+        "severity": "HIGH",
+        "cwe": "CWE-22"
+      }
+    ],
+    "summary": {
+      "total_flows_analyzed": 258948,
+      "critical_count": 16227,
+      "high_count": 6677,
+      "medium_count": 894
+    }
+  },
+  "absence_findings": [],
+  "recommendations": [
+    "CRITICAL: 16227 taint flows reach dangerous sinks (code exec, command injection, SQLi)",
+    "HIGH: 6677 taint flows reach risky sinks (deserialize, file ops, XSS)",
+    "Pattern: Potential code execution sinks found - prioritize review",
+    "Pattern: Deserialization patterns found - check for untrusted input",
+    "Pattern: SQL patterns found - check for injection",
+    "Pattern: DOM XSS sinks found - check input sanitization",
+    "Pattern: Path join/resolve with user input found - verify absolute path handling (os.path.join/Path.Combine discard base on absolute input)",
+    "Pattern: Framework raw HTML rendering found - check all inputs to these sinks for XSS",
+    "Pattern: Client-side redirect patterns found - check for open redirect and OAuth token theft chains",
+    "Pattern: PHP variable injection (extract/parse_str) found - can overwrite auth variables",
+    "Pattern: Error-swallowing patterns found - check for fail-open auth/security bypasses (CWE-390)",
+    "Pattern: Mass assignment patterns found - verify input binding is restricted to allowed fields",
+    "Pattern: IDOR risk patterns found - verify object-level authorization on all ID-based lookups",
+    "Pattern: ReDoS risk - user-controlled regex or nested quantifiers found (CWE-1333)"
+  ],
+  "low_detection_warning": ""
+}

@@ -1,0 +1,1022 @@
+{
+  "metadata": {
+    "created": "2026-03-27T11:52:13-04:00",
+    "last_updated": "2026-03-28T11:32:52-04:00",
+    "total_tasks_created": 159,
+    "total_tasks_completed": 154,
+    "current_iteration": 154
+  },
+  "completed_keys": [
+    "analysis_planning:initial",
+    "audit:api_security",
+    "audit:auth_idor_gap_hunter",
+    "audit:auth_session",
+    "audit:authz_access",
+    "audit:business_logic",
+    "audit:client_side",
+    "audit:code_symmetry_invariants",
+    "audit:concurrency",
+    "audit:cross_feature_chains",
+    "audit:data_disclosure",
+    "audit:data_protection",
+    "audit:deserialization",
+    "audit:edge_cases",
+    "audit:file_handling",
+    "audit:infrastructure_code",
+    "audit:input_injection",
+    "audit:request_handling",
+    "audit:smart_contract_defi",
+    "audit:ssrf",
+    "audit:test_coverage",
+    "discovery:architecture",
+    "discovery:documentation",
+    "discovery:feature_investigation",
+    "discovery:taint_analysis",
+    "discovery:tech_stack",
+    "evaluate_preanalysis:crypto_secrets",
+    "evaluate_preanalysis:deserialization",
+    "evaluate_preanalysis:file_upload",
+    "evaluate_preanalysis:php_type_juggling",
+    "evaluate_preanalysis:redirect_xss",
+    "evaluate_preanalysis:shell_execution",
+    "evaluate_preanalysis:sql_injection",
+    "evaluate_preanalysis:ssrf",
+    "evaluate_preanalysis:xxe_xml",
+    "evaluate_scope:framework_core",
+    "evaluate_scope:sales_state_machine",
+    "hotspot_walk:batch3",
+    "hotspot_walk:top_tainted_batch1",
+    "hotspot_walk:top_tainted_batch2",
+    "investigate:admin_audit_logging_gaps",
+    "investigate:admin_auth_timing_enumeration",
+    "investigate:admin_backup_encryption",
+    "investigate:admin_email_change_no_session_revoke",
+    "investigate:admin_mass_assignment_pattern",
+    "investigate:admin_notification_feed_ssrf",
+    "investigate:admin_secretkey_md5_weakness",
+    "investigate:admin_ssrf_redis_session_chain",
+    "investigate:admin_token_brute_force",
+    "investigate:api_stored_xss_rendering",
+    "investigate:api_token_revocation_completeness",
+    "investigate:ato_chain_rest_email_password_reset",
+    "investigate:carrier_config_ssrf",
+    "investigate:cart_checkout_race_mutex_divergence",
+    "investigate:checkout_cart_manipulation",
+    "investigate:checkout_config_data_exposure",
+    "investigate:cms_template_injection",
+    "investigate:cms_wysiwyg_upload_security",
+    "investigate:coupon_double_use_audit_trail",
+    "investigate:coupon_race_condition",
+    "investigate:creditmemo_adjustment_edge_cases",
+    "investigate:creditmemo_refund_race\ninvestigate:address_idor_other_endpoints",
+    "investigate:cron_http_trigger",
+    "investigate:cron_unique_status_variable_bug",
+    "investigate:crypt_key_exposure_vectors",
+    "investigate:csrf_xhr_bypass",
+    "investigate:csv_formula_injection",
+    "investigate:curl_ftp_ssrf_amplification",
+    "investigate:curl_protocol_override_ssrf",
+    "investigate:customer_account_security",
+    "investigate:customer_address_upload_auth",
+    "investigate:customer_viewfile_path_traversal",
+    "investigate:di_plugin_security",
+    "investigate:download_option_secret_key",
+    "investigate:downloadable_get_headers_redirect_ssrf",
+    "investigate:downloadable_product_security",
+    "investigate:dynamic_config_attack",
+    "investigate:elasticsearch_query_injection",
+    "investigate:elasticsearch_testconnection_ssrf",
+    "investigate:email_enumeration_api",
+    "investigate:email_enumeration_chain",
+    "investigate:encryption_key_management_rotation",
+    "investigate:error_processor_path_traversal",
+    "investigate:error_report_information_disclosure",
+    "investigate:file_content_type_sniffing",
+    "investigate:graphql_idor_systematic",
+    "investigate:graphql_no_rate_limit",
+    "investigate:graphql_resolver_auth_consistency",
+    "investigate:graphql_resolver_idor",
+    "investigate:graphql_search_injection",
+    "investigate:guest_cart_id_security",
+    "investigate:guest_order_access",
+    "investigate:guest_order_brute_force",
+    "investigate:h001_setup_sqli_validation",
+    "investigate:host_header_url_construction",
+    "investigate:import_export_file_handling",
+    "investigate:import_export_security",
+    "investigate:import_ssrf_all_callers",
+    "investigate:invoice_capture_void_race",
+    "investigate:ip_spoofing_captcha_bypass_chain",
+    "investigate:ip_spoofing_remoteaddress_consumers",
+    "investigate:js_escaper_data_uri_bypass",
+    "investigate:jwt_token_replay_session_binding",
+    "investigate:jwt_token_security",
+    "investigate:ko_html_binding_stored_xss_surface",
+    "investigate:legacy_encrypted_data",
+    "investigate:locale_number_parsing_financial",
+    "investigate:login_as_customer_security",
+    "investigate:loginascustomer_privilege_escalation",
+    "investigate:missing_2fa_recaptcha_impact",
+    "investigate:mq_consumer_injection",
+    "investigate:multishipping_instant_purchase",
+    "investigate:noEscape_stored_xss",
+    "investigate:oauth_implementation_security",
+    "investigate:order_mutex_coverage_gap",
+    "investigate:order_state_transitions",
+    "investigate:pagecache_cookie_cache_poisoning",
+    "investigate:payment_debug_log_sensitive_data",
+    "investigate:paypal_payment_security",
+    "investigate:prototype_pollution_jquery_extend",
+    "investigate:redis_session_cache",
+    "investigate:redis_session_cache_auth",
+    "investigate:refund_creditmemo_abuse",
+    "investigate:rest_api_mass_assignment",
+    "investigate:rest_customer_mass_assignment",
+    "investigate:rest_email_change_reauth",
+    "investigate:rest_error_disclosure_devmode",
+    "investigate:rest_graphql_consistency",
+    "investigate:rest_self_scope_param_override",
+    "investigate:rule_condition_class_instantiation",
+    "investigate:search_coupon_security",
+    "investigate:session_validation_weaknesses",
+    "investigate:sql_concatenation_all_patterns",
+    "investigate:stomp_jolokia_credential_exposure",
+    "investigate:swagger_production_exposure",
+    "investigate:symlink_file_operations",
+    "investigate:system_config_cache_integrity",
+    "investigate:template_directive_ssti",
+    "investigate:ui_component_acl_bypass",
+    "investigate:user_content_features",
+    "investigate:varnish_ban_regex_injection",
+    "investigate:weak_prng_security_contexts",
+    "investigate:xss_chain_m010_l005",
+    "tech_specific:jwt_security",
+    "trace_taint:bundle_import_sql_injection",
+    "trace_taint:catalog_urlrewrite_column_injection",
+    "trace_taint:formdata_parse_str_injection",
+    "trace_taint:indexer_destruct_gadget_chain",
+    "trace_taint:mediagallery_regexp_injection",
+    "trace_taint:quote_order_options_deser_chain",
+    "trace_taint:wishlist_token_cache_param_injection",
+    "trace_taint:xml_layout_simplexml_xxe",
+    "validate_discovery:initial"
+  ],
+  "tasks": [
+    {
+      "id": "task_001",
+      "key": "discovery:tech_stack",
+      "status": "completed"
+    },
+    {
+      "id": "task_002",
+      "key": "discovery:architecture",
+      "status": "completed"
+    },
+    {
+      "id": "task_003",
+      "key": "discovery:documentation",
+      "status": "completed"
+    },
+    {
+      "id": "task_004",
+      "key": "discovery:taint_analysis",
+      "status": "completed"
+    },
+    {
+      "id": "task_016",
+      "key": "discovery:feature_investigation",
+      "status": "completed"
+    },
+    {
+      "id": "task_017",
+      "key": "validate_discovery:initial",
+      "status": "completed"
+    },
+    {
+      "id": "task_032",
+      "key": "evaluate_preanalysis:deserialization",
+      "status": "completed"
+    },
+    {
+      "id": "task_033",
+      "key": "evaluate_preanalysis:php_type_juggling",
+      "status": "completed"
+    },
+    {
+      "id": "task_034",
+      "key": "evaluate_preanalysis:xxe_xml",
+      "status": "completed"
+    },
+    {
+      "id": "task_071",
+      "key": "analysis_planning:initial",
+      "status": "completed"
+    },
+    {
+      "id": "task_005",
+      "key": "audit:auth_session",
+      "status": "completed"
+    },
+    {
+      "id": "task_028",
+      "key": "audit:auth_idor_gap_hunter",
+      "status": "completed"
+    },
+    {
+      "id": "task_007",
+      "key": "audit:input_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_022",
+      "key": "audit:api_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_006",
+      "key": "audit:authz_access",
+      "status": "completed"
+    },
+    {
+      "id": "task_008",
+      "key": "audit:data_protection",
+      "status": "completed"
+    },
+    {
+      "id": "task_009",
+      "key": "audit:business_logic",
+      "status": "completed"
+    },
+    {
+      "id": "task_029",
+      "key": "audit:code_symmetry_invariants",
+      "status": "completed"
+    },
+    {
+      "id": "task_019",
+      "key": "audit:client_side",
+      "status": "completed"
+    },
+    {
+      "id": "task_021",
+      "key": "audit:file_handling",
+      "status": "completed"
+    },
+    {
+      "id": "task_024",
+      "key": "audit:deserialization",
+      "status": "completed"
+    },
+    {
+      "id": "task_025",
+      "key": "audit:ssrf",
+      "status": "completed"
+    },
+    {
+      "id": "task_027",
+      "key": "audit:cross_feature_chains",
+      "status": "completed"
+    },
+    {
+      "id": "task_014",
+      "key": "audit:poc_generation",
+      "type": "write_poc",
+      "priority": "high",
+      "status": "in_progress",
+      "depth": 0,
+      "parent_task_id": null,
+      "title": "Generate PoCs for HIGH/CRITICAL findings",
+      "description": "For each HIGH and CRITICAL finding in findings.json, create proof-of-concept exploits where applicable. Update findings.json with PoC objects and confidence scores. Follow the write_poc task procedure.",
+      "context_file": null,
+      "created_at": "2026-03-27T11:52:13-04:00",
+      "started_at": "2026-03-28T11:32:54-04:00",
+      "completed_at": null,
+      "worker_id": "worker_3924355"
+    },
+    {
+      "id": "task_031",
+      "key": "hotspot_walk:top_tainted_batch2",
+      "status": "completed"
+    },
+    {
+      "id": "task_035",
+      "key": "evaluate_preanalysis:file_upload",
+      "status": "completed"
+    },
+    {
+      "id": "task_036",
+      "key": "evaluate_preanalysis:sql_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_037",
+      "key": "evaluate_preanalysis:shell_execution",
+      "status": "completed"
+    },
+    {
+      "id": "task_038",
+      "key": "evaluate_preanalysis:ssrf",
+      "status": "completed"
+    },
+    {
+      "id": "task_039",
+      "key": "evaluate_preanalysis:redirect_xss",
+      "status": "completed"
+    },
+    {
+      "id": "task_041",
+      "key": "investigate:admin_token_brute_force",
+      "status": "completed"
+    },
+    {
+      "id": "task_043",
+      "key": "investigate:graphql_no_rate_limit",
+      "status": "completed"
+    },
+    {
+      "id": "task_044",
+      "key": "investigate:guest_cart_id_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_046",
+      "key": "investigate:error_processor_path_traversal",
+      "status": "completed"
+    },
+    {
+      "id": "task_050",
+      "key": "investigate:missing_2fa_recaptcha_impact",
+      "status": "completed"
+    },
+    {
+      "id": "task_051",
+      "key": "trace_taint:wishlist_token_cache_param_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_053",
+      "key": "trace_taint:bundle_import_sql_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_054",
+      "key": "trace_taint:quote_order_options_deser_chain",
+      "status": "completed"
+    },
+    {
+      "id": "task_060",
+      "key": "investigate:paypal_payment_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_061",
+      "key": "investigate:checkout_cart_manipulation",
+      "status": "completed"
+    },
+    {
+      "id": "task_062",
+      "key": "investigate:customer_account_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_063",
+      "key": "investigate:import_export_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_064",
+      "key": "investigate:guest_order_access",
+      "status": "completed"
+    },
+    {
+      "id": "task_065",
+      "key": "investigate:cms_template_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_072",
+      "key": "tech_specific:jwt_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_073",
+      "key": "investigate:redis_session_cache",
+      "status": "completed"
+    },
+    {
+      "id": "task_074",
+      "key": "investigate:rest_graphql_consistency",
+      "status": "completed"
+    },
+    {
+      "id": "task_076",
+      "key": "evaluate_scope:framework_core",
+      "status": "completed"
+    },
+    {
+      "id": "task_077",
+      "key": "evaluate_scope:sales_state_machine",
+      "status": "completed"
+    },
+    {
+      "id": "task_080",
+      "key": "hotspot_walk:batch3",
+      "status": "completed"
+    },
+    {
+      "id": "task_010",
+      "key": "audit:infrastructure_code",
+      "status": "completed"
+    },
+    {
+      "id": "task_020",
+      "key": "audit:request_handling",
+      "status": "completed"
+    },
+    {
+      "id": "task_023",
+      "key": "audit:data_disclosure",
+      "status": "completed"
+    },
+    {
+      "id": "task_026",
+      "key": "audit:concurrency",
+      "status": "completed"
+    },
+    {
+      "id": "task_011",
+      "key": "audit:edge_cases",
+      "status": "completed"
+    },
+    {
+      "id": "task_013",
+      "key": "audit:test_coverage",
+      "status": "completed"
+    },
+    {
+      "id": "task_040",
+      "key": "evaluate_preanalysis:crypto_secrets",
+      "status": "completed"
+    },
+    {
+      "id": "task_042",
+      "key": "investigate:email_enumeration_api",
+      "status": "completed"
+    },
+    {
+      "id": "task_045",
+      "key": "investigate:swagger_production_exposure",
+      "status": "completed"
+    },
+    {
+      "id": "task_047",
+      "key": "investigate:cron_http_trigger",
+      "status": "completed"
+    },
+    {
+      "id": "task_048",
+      "key": "investigate:admin_notification_feed_ssrf",
+      "status": "completed"
+    },
+    {
+      "id": "task_049",
+      "key": "investigate:login_as_customer_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_052",
+      "key": "trace_taint:formdata_parse_str_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_055",
+      "key": "investigate:curl_ftp_ssrf_amplification",
+      "status": "completed"
+    },
+    {
+      "id": "task_056",
+      "key": "trace_taint:catalog_urlrewrite_column_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_057",
+      "key": "trace_taint:mediagallery_regexp_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_058",
+      "key": "trace_taint:xml_layout_simplexml_xxe",
+      "status": "completed"
+    },
+    {
+      "id": "task_066",
+      "key": "investigate:user_content_features",
+      "status": "completed"
+    },
+    {
+      "id": "task_067",
+      "key": "investigate:downloadable_product_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_068",
+      "key": "investigate:admin_backup_encryption",
+      "status": "completed"
+    },
+    {
+      "id": "task_069",
+      "key": "investigate:multishipping_instant_purchase",
+      "status": "completed"
+    },
+    {
+      "id": "task_070",
+      "key": "investigate:search_coupon_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_075",
+      "key": "investigate:dynamic_config_attack",
+      "status": "completed"
+    },
+    {
+      "id": "task_078",
+      "key": "investigate:mq_consumer_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_079",
+      "key": "investigate:di_plugin_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_030",
+      "key": "audit:smart_contract_defi",
+      "status": "completed"
+    },
+    {
+      "id": "task_105",
+      "key": "hotspot_walk:top_tainted_batch1",
+      "status": "completed"
+    },
+    {
+      "id": "task_059",
+      "key": "trace_taint:indexer_destruct_gadget_chain",
+      "status": "completed"
+    },
+    {
+      "id": "task_015",
+      "key": "debug:evaluate_tooling",
+      "type": "meta",
+      "priority": "final",
+      "status": "pending",
+      "depth": 0,
+      "parent_task_id": null,
+      "run_last": true,
+      "requires_debug_mode": true,
+      "title": "Evaluate tooling gaps and generate improvement recommendations",
+      "description": "ONLY RUN IF DEBUG MODE WAS ACTIVE. Analyze debug/tooling_log.jsonl and debug/suggestions.md. Aggregate MCP vs source discrepancies, evaluate skill usage, analyze context size issues, compile tool wishlist. Write recommendations to debug/tooling_recommendations.md. Follow the meta task procedure.",
+      "context_file": null,
+      "created_at": "2026-03-27T11:52:13-04:00",
+      "started_at": null,
+      "completed_at": null,
+      "worker_id": null
+    },
+    {
+      "id": "task_012",
+      "key": "report:generate",
+      "type": "report",
+      "priority": "final",
+      "status": "pending",
+      "depth": 0,
+      "parent_task_id": null,
+      "run_last": true,
+      "skill": "generate-report",
+      "title": "Generate final audit report and executive summary",
+      "description": "Synthesize all confirmed findings into the final report. Review finding chains, run coverage checks with get_unvisited(), generate SECURITY_AUDIT_REPORT.md via /generate-report. Follow the report task procedure.",
+      "context_file": null,
+      "created_at": "2026-03-27T11:52:13-04:00",
+      "started_at": null,
+      "completed_at": null,
+      "worker_id": null
+    },
+    {
+      "id": "task_081",
+      "key": "investigate:customer_viewfile_path_traversal",
+      "status": "completed"
+    },
+    {
+      "id": "task_082",
+      "key": "investigate:cms_wysiwyg_upload_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_083",
+      "key": "investigate:import_export_file_handling",
+      "status": "completed"
+    },
+    {
+      "id": "task_084",
+      "key": "investigate:csv_formula_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_085",
+      "key": "investigate:import_ssrf_all_callers",
+      "status": "completed"
+    },
+    {
+      "id": "task_086",
+      "key": "investigate:carrier_config_ssrf",
+      "status": "completed"
+    },
+    {
+      "id": "task_087",
+      "key": "investigate:legacy_encrypted_data",
+      "status": "completed"
+    },
+    {
+      "id": "task_088",
+      "key": "investigate:weak_prng_security_contexts",
+      "status": "completed"
+    },
+    {
+      "id": "task_089",
+      "key": "investigate:jwt_token_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_090",
+      "key": "investigate:admin_auth_timing_enumeration",
+      "status": "completed"
+    },
+    {
+      "id": "task_091",
+      "key": "investigate:oauth_implementation_security",
+      "status": "completed"
+    },
+    {
+      "id": "task_092",
+      "key": "investigate:session_validation_weaknesses",
+      "status": "completed"
+    },
+    {
+      "id": "task_093",
+      "key": "investigate:rest_customer_mass_assignment",
+      "status": "completed"
+    },
+    {
+      "id": "task_094",
+      "key": "investigate:graphql_idor_systematic",
+      "status": "completed"
+    },
+    {
+      "id": "task_095",
+      "key": "investigate:csrf_xhr_bypass",
+      "status": "completed"
+    },
+    {
+      "id": "task_096",
+      "key": "investigate:download_option_secret_key",
+      "status": "completed"
+    },
+    {
+      "id": "task_097",
+      "key": "investigate:template_directive_ssti",
+      "status": "completed"
+    },
+    {
+      "id": "task_098",
+      "key": "investigate:sql_concatenation_all_patterns",
+      "status": "completed"
+    },
+    {
+      "id": "task_099",
+      "key": "investigate:noEscape_stored_xss",
+      "status": "completed"
+    },
+    {
+      "id": "task_100",
+      "key": "investigate:elasticsearch_query_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_101",
+      "key": "investigate:graphql_resolver_idor",
+      "status": "completed"
+    },
+    {
+      "id": "task_102",
+      "key": "investigate:api_stored_xss_rendering",
+      "status": "completed"
+    },
+    {
+      "id": "task_103",
+      "key": "investigate:rest_api_mass_assignment",
+      "status": "completed"
+    },
+    {
+      "id": "task_104",
+      "key": "investigate:graphql_search_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_106",
+      "key": "investigate:xss_chain_m010_l005",
+      "status": "completed"
+    },
+    {
+      "id": "task_107",
+      "key": "investigate:email_enumeration_chain",
+      "status": "completed"
+    },
+    {
+      "id": "task_108",
+      "key": "investigate:admin_mass_assignment_pattern",
+      "status": "completed"
+    },
+    {
+      "id": "task_109",
+      "key": "investigate:graphql_resolver_auth_consistency",
+      "status": "completed"
+    },
+    {
+      "id": "task_110",
+      "key": "investigate:rest_self_scope_param_override",
+      "status": "completed"
+    },
+    {
+      "id": "task_111",
+      "key": "investigate:guest_order_brute_force",
+      "status": "completed"
+    },
+    {
+      "id": "task_112",
+      "key": "investigate:loginascustomer_privilege_escalation",
+      "status": "completed"
+    },
+    {
+      "id": "task_113",
+      "key": "investigate:stomp_jolokia_credential_exposure",
+      "status": "completed"
+    },
+    {
+      "id": "task_114",
+      "key": "investigate:pagecache_cookie_cache_poisoning",
+      "status": "completed"
+    },
+    {
+      "id": "task_115",
+      "key": "investigate:encryption_key_management_rotation",
+      "status": "completed"
+    },
+    {
+      "id": "task_116",
+      "key": "investigate:admin_secretkey_md5_weakness",
+      "status": "completed"
+    },
+    {
+      "id": "task_117",
+      "key": "investigate:rest_email_change_reauth",
+      "status": "completed"
+    },
+    {
+      "id": "task_118",
+      "key": "investigate:coupon_race_condition",
+      "status": "completed"
+    },
+    {
+      "id": "task_119",
+      "key": "investigate:order_state_transitions",
+      "status": "completed"
+    },
+    {
+      "id": "task_120",
+      "key": "investigate:refund_creditmemo_abuse",
+      "status": "completed"
+    },
+    {
+      "id": "task_137",
+      "key": "investigate:order_mutex_coverage_gap",
+      "status": "completed"
+    },
+    {
+      "id": "task_138",
+      "key": "investigate:admin_audit_logging_gaps",
+      "status": "completed"
+    },
+    {
+      "id": "task_154",
+      "key": "investigate:creditmemo_refund_race",
+      "status": "completed"
+    },
+    {
+      "id": "task_155",
+      "key": "investigate:js_escaper_data_uri_bypass",
+      "status": "completed"
+    },
+    {
+      "id": "task_121",
+      "key": "investigate:ko_html_binding_stored_xss_surface",
+      "status": "completed"
+    },
+    {
+      "id": "task_122",
+      "key": "investigate:prototype_pollution_jquery_extend",
+      "status": "completed"
+    },
+    {
+      "id": "task_123",
+      "key": "investigate:customer_address_upload_auth",
+      "status": "completed"
+    },
+    {
+      "id": "task_124",
+      "key": "investigate:symlink_file_operations",
+      "status": "completed"
+    },
+    {
+      "id": "task_125",
+      "key": "investigate:file_content_type_sniffing",
+      "status": "completed"
+    },
+    {
+      "id": "task_126",
+      "key": "investigate:redis_session_cache_auth",
+      "status": "completed"
+    },
+    {
+      "id": "task_127",
+      "key": "investigate:system_config_cache_integrity",
+      "status": "completed"
+    },
+    {
+      "id": "task_128",
+      "key": "investigate:rule_condition_class_instantiation",
+      "status": "completed"
+    },
+    {
+      "id": "task_129",
+      "key": "investigate:elasticsearch_testconnection_ssrf",
+      "status": "completed"
+    },
+    {
+      "id": "task_130",
+      "key": "investigate:curl_protocol_override_ssrf",
+      "status": "completed"
+    },
+    {
+      "id": "task_131",
+      "key": "investigate:downloadable_get_headers_redirect_ssrf",
+      "status": "completed"
+    },
+    {
+      "id": "task_132",
+      "key": "investigate:cart_checkout_race_mutex_divergence",
+      "status": "completed"
+    },
+    {
+      "id": "task_133",
+      "key": "investigate:ato_chain_rest_email_password_reset",
+      "status": "completed"
+    },
+    {
+      "id": "task_134",
+      "key": "investigate:coupon_double_use_audit_trail",
+      "status": "completed"
+    },
+    {
+      "id": "task_135",
+      "key": "investigate:crypt_key_exposure_vectors",
+      "status": "completed"
+    },
+    {
+      "id": "task_136",
+      "key": "investigate:jwt_token_replay_session_binding",
+      "status": "completed"
+    },
+    {
+      "id": "task_139",
+      "key": "investigate:admin_ssrf_redis_session_chain",
+      "status": "completed"
+    },
+    {
+      "id": "task_140",
+      "key": "investigate:ip_spoofing_remoteaddress_consumers",
+      "status": "completed"
+    },
+    {
+      "id": "task_141",
+      "key": "investigate:host_header_url_construction",
+      "status": "completed"
+    },
+    {
+      "id": "task_142",
+      "key": "investigate:varnish_ban_regex_injection",
+      "status": "completed"
+    },
+    {
+      "id": "task_143",
+      "key": "investigate:checkout_config_data_exposure",
+      "status": "completed"
+    },
+    {
+      "id": "task_144",
+      "key": "investigate:payment_debug_log_sensitive_data",
+      "status": "completed"
+    },
+    {
+      "id": "task_145",
+      "key": "investigate:error_report_information_disclosure",
+      "status": "completed"
+    },
+    {
+      "id": "task_146",
+      "key": "investigate:invoice_capture_void_race",
+      "status": "completed"
+    },
+    {
+      "id": "task_147",
+      "key": "investigate:cron_unique_status_variable_bug",
+      "status": "completed"
+    },
+    {
+      "id": "task_148",
+      "key": "investigate:locale_number_parsing_financial",
+      "status": "completed"
+    },
+    {
+      "id": "task_149",
+      "key": "investigate:creditmemo_adjustment_edge_cases",
+      "status": "completed"
+    },
+    {
+      "id": "task_150",
+      "key": "investigate:rest_error_disclosure_devmode",
+      "status": "completed"
+    },
+    {
+      "id": "task_151",
+      "key": "investigate:api_token_revocation_completeness",
+      "status": "completed"
+    },
+    {
+      "id": "task_152",
+      "key": "investigate:ui_component_acl_bypass",
+      "status": "completed"
+    },
+    {
+      "id": "task_153",
+      "key": "investigate:admin_email_change_no_session_revoke",
+      "status": "completed"
+    },
+    {
+      "id": "task_154",
+      "key": "investigate:address_idor_other_endpoints",
+      "status": "completed"
+    },
+    {
+      "id": "task_156",
+      "key": "investigate:h001_setup_sqli_validation",
+      "status": "completed"
+    },
+    {
+      "id": "task_157",
+      "key": "investigate:ip_spoofing_captcha_bypass_chain",
+      "status": "completed"
+    },
+    {
+      "id": "task_158",
+      "key": "validation:h006_email_enum_chain",
+      "type": "validation",
+      "skill": "auth-audit",
+      "priority": "high",
+      "status": "pending",
+      "depth": 1,
+      "parent_task_id": "task_107",
+      "title": "Validate H-006: Email Enumeration + Brute-Force ATO Chain",
+      "description": "Adversarial validation of H-006. Verify: (1) isEmailAvailable endpoint truly returns distinct responses for existing vs non-existing emails, (2) credential brute-force via /V1/integration/customer/token is feasible given CAPTCHA/lockout controls, (3) chain with H-005 ATO is viable end-to-end. Check attack_complexity, confidence, and severity. Read source code of IsEmailAvailable, CustomerTokenService, lockout config.",
+      "context_file": "contexts/task_158.md",
+      "created_at": "2026-03-28T07:11:07.778128+00:00",
+      "started_at": null,
+      "completed_at": null,
+      "worker_id": null
+    },
+    {
+      "id": "task_159",
+      "key": "validation:h007_ip_spoofing_rate_limit_bypass",
+      "type": "validation",
+      "skill": "auth-audit",
+      "priority": "high",
+      "status": "pending",
+      "depth": 1,
+      "parent_task_id": "task_157",
+      "title": "Validate H-007: IP Spoofing Bypasses All IP-Based Rate Limiting",
+      "description": "Adversarial validation of H-007. Verify: (1) RemoteAddress actually reads X-Forwarded-For when useRemoteAddress=false (default), (2) CAPTCHA per-IP counters reset with different X-Forwarded-For values, (3) RequestThrottler backpressure resets with spoofed IP, (4) confirm there is no WAF/reverse proxy that strips X-Forwarded-For. Check if Magento nginx sample config strips this header. Assess attack_complexity and real-world exploitability.",
+      "context_file": "contexts/task_159.md",
+      "created_at": "2026-03-28T07:11:07.778128+00:00",
+      "started_at": null,
+      "completed_at": null,
+      "worker_id": null
+    }
+  ]
+}

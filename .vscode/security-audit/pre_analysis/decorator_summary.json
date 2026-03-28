@@ -1,0 +1,14 @@
+{
+  "detected_techs": [
+    "php"
+  ],
+  "entry_patterns_searched": 3,
+  "sink_patterns_searched": 17,
+  "raw_entry_matches": 18,
+  "raw_sink_matches": 703,
+  "functions_in_database": 73655,
+  "candidates_generated": 502,
+  "candidate_entry_points": 4,
+  "candidate_sinks": 498,
+  "validation_status": "pending_llm_review"
+}
