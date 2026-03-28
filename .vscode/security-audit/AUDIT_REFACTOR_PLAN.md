@@ -69,26 +69,47 @@ If any field cannot be determined, write "unknown — investigation needed" and 
 
 ## Phase 1 — Entry Point and Sink Enumeration
 
+### Task 1.0 — Gap Analysis Against Pre-Analysis Candidates (runs before 1.1 and 1.2)
+
+The pre-analysis scripts produce candidate entry points and sinks via grep patterns (`$_GET`, `$_POST`, `unserialize(`, SQL keywords, etc.). These patterns are framework-agnostic and generic — they find what is directly visible in source text but miss anything dispatched through a framework layer.
+
+Before enumerating new candidates, the LLM must explicitly compare what Phase 0 found against what the pre-analysis captured:
+
+1. Read `architecture_overview.md` — specifically the entry point pattern and sink patterns
+2. Read the pre-analysis candidates (`candidate_decorators.json` or equivalent)
+3. Ask: **does the pre-analysis capture the full entry point pattern described in Phase 0?**
+   - If Phase 0 says "Magento: all classes implementing ActionInterface with execute() under Controller/ dirs, registered via routes.xml" and pre-analysis has 4 grep-hit entries — the gap is ~1000 unregistered controller execute() methods
+   - If Phase 0 says "Django: functions decorated with @app.route or @api_view" and pre-analysis found 80% of them via grep on `def ` — the gap is any that use class-based views or custom decorators
+4. Ask: **does the pre-analysis capture the full sink surface described in Phase 0?**
+   - If Phase 0 identified an ORM query builder (`$connection->select()->from()`) and pre-analysis only grepped for `query(` — the gap is all ORM-style queries
+5. Write a brief gap summary: what the pre-analysis found, what it missed, and what Phase 1 must go look for specifically
+
+This gap analysis is the instruction for what to search in Tasks 1.1 and 1.2. Phase 1 does not start from the pre-analysis candidates and validate them — it starts from what the architecture actually requires and searches for that, using the pre-analysis as a partial starting point that may be incomplete.
+
 ### Task 1.1 — Entry Point Discovery (LLM-driven, framework-aware)
 
-Using the architecture understanding from Phase 0, search for actual entry points in this codebase. The search strategy comes from what was learned — not from a pre-baked catalog.
+Using the gap analysis from Task 1.0, search for entry points as defined by the architecture — not by what the grep patterns can find.
 
-For each candidate:
+For each candidate (whether from pre-analysis or newly found by framework-aware search):
 1. Read the function body
-2. Confirm: does untrusted external input (HTTP param, request body, header, CLI arg, queue message, uploaded file, environment variable) arrive at this function without sanitization applied before it?
+2. Confirm: does untrusted external input (HTTP param, request body, header, CLI arg, queue message, uploaded file) arrive at this function without sanitization applied before it?
 3. **Yes → validated entry point.** Record the exact function ID (`name,/abs/path#line`).
-4. **No → reject.** Note why (input is always sanitized before here, function is internal-only, etc.)
+4. **No → reject.** Note why.
+
+If the gap analysis identified a class of entry points that wasn't in pre-analysis (e.g., Magento ActionInterface controllers), the LLM must search for and enumerate that class — not wait for the grep patterns to find them.
 
 ### Task 1.2 — Sink Enumeration (LLM-driven, framework-aware)
 
-Using the architecture understanding from Phase 0, search for dangerous operations in this codebase's specific idiom.
+Using the gap analysis from Task 1.0, search for sinks as they exist in this specific codebase's idiom.
 
 For each candidate:
 1. Read the function body
-2. Confirm: does this function execute the dangerous operation (SQL execution, deserialization, shell command, file write, outbound network call, eval)?
-3. Confirm: is at least one parameter to that dangerous operation a function parameter or accessible property that is not always sanitized at the point of call?
+2. Confirm: does this function execute the dangerous operation?
+3. Confirm: is at least one parameter to that dangerous operation not always sanitized at the point of call?
 4. **Both yes → validated sink.** Record the exact function ID.
 5. **Either no → reject.** Note why.
+
+If the gap analysis identified sink patterns not covered by pre-analysis grep (e.g., ORM query builder methods, framework-wrapped serializers), the LLM must search for and enumerate those — not rely on the pre-analysis to have found them.
 
 ### What "Validated" Means — The Standard
 
@@ -124,7 +145,7 @@ Step 2b — NOT FOUND (scanner did not index this function):
   NOW proceed to confirm.
 ```
 
-**Why this matters:** `reapplyOverridesToMerged` silently skips any function ID not in the in-memory map — no error, no warning, no count. The confirm response says "502 applied" even if 200 don't exist. `paths_to_sinks` and `paths_from_entries` will return empty results for those functions with no indication of why. The index-match check eliminates this class of silent failure.
+**Why this matters:** `reapplyOverridesToMerged` silently skips any function ID not in the in-memory map — no error, no warning, no count. The confirm response says "502 applied" even if many don't exist. `paths_to_sinks` and `paths_from_entries` will return empty results for those functions with no indication of why. The index-match check eliminates this class of silent failure.
 
 ---
 
@@ -151,11 +172,9 @@ Every finding, when first written, must also populate a compact entry in `attack
 ```
 
 - `gives` — what capability or information the attacker gains if they exploit this finding
-- `requires` — what precondition must be true (attacker role, prior exploitation step, configuration state, etc.)
+- `requires` — what precondition must be true (attacker role, prior exploitation step, configuration state)
 
-This is the same mental model a human attacker uses: *"what does this give me, and what do I need to use it?"*
-
-**Scale:** ~30-40 tokens per finding. All 155 current findings as primitives = ~12,000 tokens — fits in a single context alongside a new finding's full detail. The index stays compact as finding count grows.
+**Scale:** ~30-40 tokens per finding. All findings as primitives = ~12,000 tokens at 155 findings — fits in a single context alongside a new finding's full detail. The index stays compact as finding count grows.
 
 ### On-Write Chain-Check Trigger (deterministic, not a reminder)
 
@@ -163,15 +182,15 @@ Every time a finding is written at **any severity**, the audit loop immediately 
 
 ```
 chain_check_task(
-  new_finding        = <full detail of the new finding including its gives/requires>,
-  all_primitives     = <complete attack_primitives.json — id, severity, title, gives, requires
-                        for ALL existing findings>
+  new_finding    = <full detail of the new finding including its gives/requires>,
+  all_primitives = <complete attack_primitives.json — id, severity, title, gives, requires
+                    for ALL existing findings>
 )
 ```
 
 The task:
 1. Scans all primitives: does any existing finding's `gives` satisfy the new finding's `requires`? Does the new finding's `gives` satisfy any existing finding's `requires`?
-2. For each matched pair: reads full detail of both findings, reasons about exploitability
+2. For each matched pair: reads full detail of both findings and reasons about exploitability
 3. Writes confirmed chains to `chains.json`
 
 Severity is **not** a filter. A LOW gadget chains with another LOW gadget chains with an INFO finding to produce a CRITICAL chain — checking only HIGH/CRITICAL misses this entirely.
@@ -187,7 +206,7 @@ A chain is valid when the LLM can explain the mechanism. Call graph agreement is
 
 ### chains.json — Authoritative Chain Record
 
-The main audit loop **never writes to chains.json directly.** Only the chain-check subtask appends to it. This ensures every chain has a traceable origin.
+The main audit loop **never writes to chains.json directly.** Only the chain-check subtask appends to it.
 
 ```json
 {
@@ -216,7 +235,7 @@ The main audit loop **never writes to chains.json directly.** Only the chain-che
 
 ### chains_with Field on Findings
 
-The `chains_with` field on individual findings is kept for display and backward compatibility but is **not the authoritative record**. `chains.json` is. The field may be derived/populated from chains.json at report time.
+The `chains_with` field on individual findings is kept for display and backward compatibility but is **not the authoritative record**. `chains.json` is. The field may be derived from chains.json at report time.
 
 ### End-of-Audit Full Cross-Check
 
@@ -227,28 +246,26 @@ Before writing the final report, a dedicated task:
 4. Also checks for broken `chains_with` references (IDs that don't exist in findings.json)
 5. Updates chains.json with anything the per-finding triggers missed
 
-This is the completeness backstop. It catches chains that were missed because a finding's primitive was initially written too narrowly and later revised, or because both findings in a chain were added before the trigger system was in place.
+This is the completeness backstop for cases where a primitive was initially written too narrowly and later revised, or where both findings existed before the trigger system ran.
 
 ---
 
 ## Audit Loop Prompt Instructions
 
-These must be in the audit loop system prompt, not config:
-
 ### Architecture exploration:
 > At the start of every new project audit, explore the codebase to understand it. You decide what to look at. Do not rely on assumptions about the framework or apply a generic checklist. Write your findings to `architecture_overview.md` — including what you could not determine — before writing any vulnerability findings.
 
-### Entry point and sink discovery:
-> Use your architecture understanding to search for entry points and sinks as they exist in this specific codebase. After identifying a candidate, read its code before marking it confirmed. A grep match or pattern catalog suggestion is a lead, not a confirmation. Do not confirm until you have verified data flow.
+### Entry point and sink gap analysis:
+> Before enumerating entry points and sinks, read `architecture_overview.md` and compare the entry point and sink patterns it describes against the pre-analysis candidates. Explicitly identify what the pre-analysis grep patterns could not find for this specific framework or codebase. The gap is your search target — go find those directly. Do not treat the pre-analysis candidates as a complete list.
 
-### Registering with MCP:
+### Confirming with MCP:
 > Before calling `discover_attack_surface(confirm={...})` for any function:
 > 1. Call `search()` to verify the function exists in the scanned index
 > 2. If not found: call `add_function()` then `add_relationship()` for callers and callees, then confirm
 > Silent failures in function_overrides.json are not reported. Skipping this check means path-tracing returns empty results for that function with no error.
 
 ### Chain detection:
-> When you write any finding, also write its attack primitive (gives/requires) to `attack_primitives.json`. You do not decide whether to check for chains — the chain-check subtask is spawned automatically and handles it. Do not write directly to `chains.json`. Your job is to write accurate gives/requires fields so the chain-check task has the information it needs.
+> When you write any finding, also write its attack primitive (gives/requires) to `attack_primitives.json`. Do not write directly to `chains.json` — the chain-check subtask handles that. Write accurate gives/requires fields so the chain-check task has what it needs.
 
 ---
 
@@ -256,7 +273,7 @@ These must be in the audit loop system prompt, not config:
 
 | File | Purpose |
 |------|---------|
-| `architecture_overview.md` | Framework, entry point pattern, sink patterns — written in Phase 0 |
+| `architecture_overview.md` | Framework, entry point pattern, sink patterns — written in Phase 0, before any findings |
 | `attack_primitives.json` | Compact gives/requires per finding — one entry per finding at any severity |
 | `chains.json` | Authoritative chain records — written only by chain-check subtask |
 
@@ -269,5 +286,5 @@ These must be in the audit loop system prompt, not config:
 | Add Magento to `PACKAGE_FRAMEWORK_MAP` | Framework detection phase currently misses it entirely |
 | Add Magento `execute()` controller pattern to `ENTRY_POINT_PATTERNS` | ~1000 controllers invisible to pattern-based discovery |
 | `reapplyOverridesToMerged` should return unmatched IDs | Silent drops make debugging impossible |
-| `discover_attack_surface(confirm=...)` should report unmatched count | Currently reports "502 applied" even if many don't exist in function map |
+| `discover_attack_surface(confirm=...)` should report unmatched count | Currently reports "502 applied" even if many IDs don't exist in function map |
 | Add `find_chains(finding_a_id, finding_b_id)` tool | Wraps find_path with chain-specific output including inter-process gap detection |
