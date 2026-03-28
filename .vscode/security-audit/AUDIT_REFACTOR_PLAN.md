@@ -187,3 +187,54 @@ For any chain where both findings have known function IDs:
 - Add `find_chains(finding_a_id, finding_b_id)` tool that uses call graph to validate a chain
 - `reapplyOverridesToMerged` should return unmatched IDs instead of silently dropping them
 - `discover_attack_surface(confirm=...)` response should report count of IDs not found in function map
+
+---
+
+## Amendment: Chain Detection Reliability (added 2026-03-28)
+
+The plan above is insufficient. Both `find_chains` call graph validation and LLM-remembered re-sweeps are unreliable:
+
+### Why find_chains is not trustworthy as a gate
+- Path exists ≠ exploitable (taint must flow)
+- Path missing ≠ no chain (inter-process chains via Redis/session/DB/queue have no call graph path)
+- Call graph is already incomplete due to dynamic dispatch and framework routing
+
+### Why LLM-remembered chain updates fail
+- LLM is stateless between context windows — finding #150 doesn't trigger re-reading the 149 prior findings
+- Rolling audit_context.md summary is lossy — each meta-reprioritization compresses prior chain knowledge
+- No enforcement: a finding can be written without any chain check happening
+
+### Reliable Design: Remove LLM Memory as a Dependency
+
+**Rule: the main audit task never writes to chains.json. Only the chain-check subtask does.**
+
+**Trigger (deterministic, not a reminder):**
+Every time a finding is written with severity >= medium, the audit loop immediately spawns:
+
+```
+chain_check_task(
+  new_finding = <full detail>,
+  compare_against = <full detail of all HIGH/CRITICAL findings>
+                  + <id + title + one-line summary of all MEDIUM findings>
+)
+```
+
+The chain-check task asks: does this new finding enable any of those, or do any of those enable this? It writes any new chains to chains.json as named objects. It does not rely on prior audit context.
+
+**find_path is corroborating evidence, not a gate:**
+The chain-check task calls find_path as one input. A chain with no call graph path is still valid if the LLM explains the inter-process mechanism (session, Redis, DB row, queue). A chain with a call graph path but no clear taint flow is flagged unconfirmed. Both pieces of evidence are recorded in chains.json.
+
+**End-of-audit NxM cross-check:**
+Before writing the final report, a dedicated task reads ALL HIGH/CRITICAL findings in full (small enough to fit — typically <10 findings), plus titles+summaries of all MEDIUMs, and does an exhaustive pairwise check. This is the only complete sweep; it catches anything the per-finding triggers missed.
+
+**chains.json schema addition:**
+```json
+{
+  "id": "CHAIN-001",
+  "detected_by": "chain_check_subtask",       // or "end_of_audit_sweep"
+  "call_graph_path_found": true,               // find_path result
+  "inter_process_mechanism": null,             // "session" / "redis" / "db" / null
+  "llm_reasoning": "M-013 changes email; H-005 sends reset to new email...",
+  "confidence": "high"                         // high/medium/low
+}
+```
