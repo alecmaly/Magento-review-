@@ -238,3 +238,82 @@ Before writing the final report, a dedicated task reads ALL HIGH/CRITICAL findin
   "confidence": "high"                         // high/medium/low
 }
 ```
+
+---
+
+## Amendment 2: Chain Check Must Cover All Findings Regardless of Severity (2026-03-28)
+
+### The Flaw in Amendment 1
+
+Restricting the chain check to HIGH/CRITICAL findings misses the most dangerous chains. Multiple LOW/INFO gadgets combined can enable escalation to CRITICAL:
+
+- INFO (version disclosure) + LOW (predictable token format) + MEDIUM (no rate limiting) = account takeover
+- INFO (gadget class with __wakeup) + INFO (deserialization sink) + MEDIUM (attacker-controlled input path) = RCE
+- LOW (session not rotated) + INFO (timing side channel) + LOW (password reset predictable) = ATO
+
+Severity is not a reliable proxy for chain potential. A finding must be checked against ALL other findings.
+
+### The Scale Problem
+
+Reading all N findings in full detail for every new finding is expensive and gets worse as N grows. At 155 findings averaging 3,600 chars each = 563K chars per cross-check. Not viable.
+
+### Solution: Attack Primitive Index
+
+Each finding, when first written, must also populate a compact **attack primitive record** — two structured fields:
+
+```json
+{
+  "id": "M-017",
+  "gives": "unauthenticated file write to pub/media/customer_address/ if file-type address attr exists",
+  "requires": "store has at least one file-type custom address attribute configured"
+}
+```
+
+`gives` = what capability/information the attacker gains if they exploit this finding
+`requires` = what precondition must be true (attacker role, prior exploitation, config state, etc.)
+
+These two fields are ~20-40 tokens each. All 155 findings as attack primitives = ~12,000 tokens — fits comfortably alongside a new finding's full detail in a single context.
+
+### Revised Chain-Check Trigger
+
+Every time a finding is written (any severity):
+
+```
+chain_check_task(
+  new_finding = <full detail of new finding including its gives/requires>,
+  all_primitives = <id + severity + title + gives + requires for ALL existing findings>
+)
+```
+
+The task scans the primitives index: does any existing finding's `gives` satisfy this new finding's `requires`? Does this new finding's `gives` satisfy any existing finding's `requires`? For any match: read the full detail of both findings and write the chain to chains.json with reasoning.
+
+This is O(n) in token cost regardless of finding count, because the primitive index grows linearly and stays compact.
+
+### Maintaining the Primitive Index
+
+- `attack_primitives.json` — one entry per finding, maintained alongside findings.json
+- When a finding is updated (severity change, new evidence), its primitive is also updated
+- The chain-check task reads this file, not findings.json, for the cross-finding scan
+
+### Revised chains.json schema
+
+```json
+{
+  "id": "CHAIN-001",
+  "steps": ["M-017", "G-011"],
+  "chain_logic": "M-017 gives unauthenticated file write; G-011 requires attacker-controlled data in Redis/session store — M-017 alone does not reach Redis, but combined with upload path traversal could place files accessible to session handler",
+  "severity_upgrade": "M-017 is MEDIUM alone; chain with G-011 makes it HIGH",
+  "preconditions": "file-type address attribute configured; upload lands in session-accessible path",
+  "call_graph_path_found": false,
+  "inter_process_mechanism": "filesystem",
+  "detected_by": "chain_check_subtask at finding M-017",
+  "confidence": "medium",
+  "llm_reasoning": "<full explanation>"
+}
+```
+
+### End-of-Audit NxM Still Required
+
+The per-finding trigger handles new additions but not retroactive chains (finding A added at iteration 10, finding B added at iteration 90 — did the trigger at B's write read A's primitive and catch the chain?). Yes — because all primitives are in the index when B is written. The trigger at B's write scans A's primitive.
+
+The end-of-audit NxM sweep remains as a completeness check for any primitives that were updated after their chain-check ran, or where `gives`/`requires` were initially written too narrowly and later revised.
